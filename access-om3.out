@@ -1,0 +1,934 @@
+NOTE from PE     0: MPP_DOMAINS_SET_STACK_SIZE: stack size set to    32768.
+NOTE from PE     0: MPP_DOMAINS_SET_STACK_SIZE: stack size set to  5000000.
+NOTE from PE     0: You are using the legacy version of the field_table
+ 
+ Dumping coupler_mod/types tree
+types/
+      air_sea_gas_flux_generic/
+            implementation/
+                  ocmip2/
+                        num_parameters = 2
+                  duce/
+                        num_parameters = 1
+                  johnson/
+                        num_parameters = 2
+            num_flags = 0
+            use_atm_pressure = T
+            use_10m_wind_speed = T
+            pass_through_ice = F
+            atm/
+                  name[1] = 'pcair'
+                  name[2] = 'u10'
+                  name[3] = 'psurf'
+                  long_name[1] = 'Atmospheric concentration'
+                  long_name[2] = 'Wind speed at 10 m'
+                  long_name[3] = 'Surface atmospheric pressure'
+                  units[1] = 'mol/mol'
+                  units[2] = 'm/s'
+                  units[3] = 'Pa'
+            ice/
+                  name[1] = 'alpha'
+                  name[2] = 'csurf'
+                  name[3] = 'sc_no'
+                  long_name[1] = 'Solubility w.r.t. atmosphere'
+                  long_name[2] = 'Ocean concentration'
+                  long_name[3] = 'Schmidt number'
+                  units[1] = 'mol/m^3/atm'
+                  units[2] = 'mol/m^3'
+                  units[3] = 'dimensionless'
+            flux/
+                  name[1] = 'flux'
+                  name[2] = 'deltap'
+                  name[3] = 'kw'
+                  name[4] = 'flux0'
+                  long_name[1] = 'Surface flux'
+                  long_name[2] = 'Ocean-air delta pressure'
+                  long_name[3] = 'Piston velocity'
+                  long_name[4] = 'Surface flux no atm'
+                  units[1] = 'mol/m^2/s'
+                  units[2] = 'uatm'
+                  units[3] = 'm/s'
+                  units[4] = 'mol/m^2/s'
+      air_sea_gas_flux/
+            implementation/
+                  ocmip2/
+                        num_parameters = 2
+                  ocmip2_data/
+                        num_parameters = 2
+                  linear/
+                        num_parameters = 3
+            num_flags = 0
+            use_atm_pressure = T
+            use_10m_wind_speed = T
+            pass_through_ice = F
+            atm/
+                  name[1] = 'pcair'
+                  name[2] = 'u10'
+                  name[3] = 'psurf'
+                  long_name[1] = 'Atmospheric concentration'
+                  long_name[2] = 'Wind speed at 10 m'
+                  long_name[3] = 'Surface atmospheric pressure'
+                  units[1] = 'mol/mol'
+                  units[2] = 'm/s'
+                  units[3] = 'Pa'
+            ice/
+                  name[1] = 'alpha'
+                  name[2] = 'csurf'
+                  long_name[1] = 'Solubility from atmosphere times Schmidt number term'
+                  long_name[2] = 'Ocean concentration times Schmidt number term'
+                  units[1] = 'mol/m^3/atm'
+                  units[2] = 'mol/m^3'
+            flux/
+                  name = 'flux'
+                  long_name = 'Surface flux'
+                  units = 'mol/m^2/s'
+      air_sea_deposition/
+            implementation/
+                  dry/
+                        num_parameters = 1
+                  wet/
+                        num_parameters = 1
+            num_flags = 0
+            use_atm_pressure = F
+            use_10m_wind_speed = F
+            pass_through_ice = T
+            atm/
+                  name = 'deposition'
+                  long_name = 'Atmospheric deposition'
+                  units = 'kg/m^2/s'
+            ice/
+                  name = NULL
+                  long_name = NULL
+                  units = NULL
+            flux/
+                  name = 'flux'
+                  long_name = 'Surface deposition'
+                  units = 'mol/m^2/s'
+      land_sea_runoff/
+            implementation/
+                  river/
+                        num_parameters = 1
+            num_flags = 0
+            use_atm_pressure = F
+            use_10m_wind_speed = F
+            pass_through_ice = T
+            atm/
+                  name = 'runoff'
+                  long_name = 'Concentration in land runoff'
+                  units = 'mol/m^3'
+            ice/
+                  name = NULL
+                  long_name = NULL
+                  units = NULL
+            flux/
+                  name = 'flux'
+                  long_name = 'Concentration in land runoff'
+                  units = 'mol/m^3'
+NOTE from PE     0: open_param_file: MOM_input has been opened successfully.
+NOTE from PE     0: open_param_file: MOM_override has been opened successfully.
+
+WARNING from PE     0: MOM_file_parser : FATAL_UNUSED_PARAMS over-ridden.  Line: 'FATAL_UNUSED_PARAMS = False' in file MOM_override.
+
+NOTE from PE     0: close_param_file: MOM_input has been closed successfully.
+NOTE from PE     0: close_param_file: MOM_override has been closed successfully.
+ ==>Note from atmos_ocean_fluxes_mod(atmos_ocean_fluxes_init): No gas fluxes
+NOTE from PE     0: callTree: ---> ocean_model_init(), ocean_model_MOM.F90
+NOTE from PE     0: open_param_file: MOM_input has been opened successfully.
+NOTE from PE     0: open_param_file: MOM_override has been opened successfully.
+
+WARNING from PE     0: MOM_file_parser : FATAL_UNUSED_PARAMS over-ridden.  Line: 'FATAL_UNUSED_PARAMS = False' in file MOM_override.
+
+
+WARNING from PE     0: MOM_file_parser : DT over-ridden.  Line: 'DT = 360' in file MOM_override.
+
+
+WARNING from PE     0: MOM_file_parser : DT_THERM over-ridden.  Line: 'DT_THERM = 3600' in file MOM_override.
+
+NOTE from PE     0: Found the optimum layout for auto-masking. Terminating iteration...
+NOTE from PE     0: MOM_domains_init: reading maskmap information from MOM_auto_mask_table
+ parse_mask_table: Number of domain regions masked in MOM_in =         1149
+ MOM_in domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  68  68  68  68  68  68
+             68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  69  69  69
+             69  69  69  69  69  69  69  69  69  69  69  69  69  69  69
+  Y-AXIS =   34  34  34  34  34  34  34  34  34  34  34  34  33  33  33  33  33  33  33  33  33  32  33  33
+             33  33  33  33  33  33  33  34  34  34  34  34  34  34  34  34  34  34  34
+ MOM_inc domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =   35  35  35  35  35  35  35  35  35  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  35  35  35  35  35  35  35  35  35
+  Y-AXIS =   17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  16  16  16  16  15  16  16
+             16  16  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17
+NOTE from PE     0: diag_manager_mod::diag_manager_init: prepend_date only supported when diag_manager_init is called with time_init present.
+ MOM_in domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  68  68  68  68  68  68
+             68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  69  69  69
+             69  69  69  69  69  69  69  69  69  69  69  69  69  69  69
+  Y-AXIS =   34  34  34  34  34  34  34  34  34  34  34  34  33  33  33  33  33  33  33  33  33  32  33  33
+             33  33  33  33  33  33  33  34  34  34  34  34  34  34  34  34  34  34  34
+ MOM_in domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =   35  35  35  35  35  35  35  35  35  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  35  35  35  35  35  35  35  35  35
+  Y-AXIS =   17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  16  16  16  16  15  16  16
+             16  16  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17
+ MOM_MOSAIC domain decomposition
+whalo =    9, ehalo =    9, shalo =    9, nhalo =    9
+  X-AXIS =  138 138 138 138 138 138 138 138 138 138 138 138 138 138 138 138 138 138 136 136 136 136 136 136
+            136 136 136 136 136 136 136 136 136 136 136 136 136 136 136 136 136 136 136 136 136 138 138 138
+            138 138 138 138 138 138 138 138 138 138 138 138 138 138 138
+  Y-AXIS =   68  68  68  68  68  68  68  68  68  68  68  68  66  66  66  66  66  66  66  66  66  64  66  66
+             66  66  66  66  66  66  66  68  68  68  68  68  68  68  68  68  68  68  68
+ MOM_MOSAIC domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  68  68  68  68  68  68
+             68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  69  69  69
+             69  69  69  69  69  69  69  69  69  69  69  69  69  69  69
+  Y-AXIS =   34  34  34  34  34  34  34  34  34  34  34  34  33  33  33  33  33  33  33  33  33  32  33  33
+             33  33  33  33  33  33  33  34  34  34  34  34  34  34  34  34  34  34  34
+ MOM_in domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  68  68  68  68  68  68
+             68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  69  69  69
+             69  69  69  69  69  69  69  69  69  69  69  69  69  69  69
+  Y-AXIS =   34  34  34  34  34  34  34  34  34  34  34  34  33  33  33  33  33  33  33  33  33  32  33  33
+             33  33  33  33  33  33  33  34  34  34  34  34  34  34  34  34  34  34  34
+ MOM_in domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =   35  35  35  35  35  35  35  35  35  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  35  35  35  35  35  35  35  35  35
+  Y-AXIS =   17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  16  16  16  16  15  16  16
+             16  16  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17
+
+WARNING from PE     0: Open_file is appending .nc to the filename ./ocean_geometry
+
+ MOM_in domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  68  68  68  68  68  68
+             68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  69  69  69
+             69  69  69  69  69  69  69  69  69  69  69  69  69  69  69
+  Y-AXIS =   34  34  34  34  34  34  34  34  34  34  34  34  33  33  33  33  33  33  33  33  33  32  33  33
+             33  33  33  33  33  33  33  34  34  34  34  34  34  34  34  34  34  34  34
+ MOM_in domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =   35  35  35  35  35  35  35  35  35  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  35  35  35  35  35  35  35  35  35
+  Y-AXIS =   17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  16  16  16  16  15  16  16
+             16  16  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17
+
+WARNING from PE  1501: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1534: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1502: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1503: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1499: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1532: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1527: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1536: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1535: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1524: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1504: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1533: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1555: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1522: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1507: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1526: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1541: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1525: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1529: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1537: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1558: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1498: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1538: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1515: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1500: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1528: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1523: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1513: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1519: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1521: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1530: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1531: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1542: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1544: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1545: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1546: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1547: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1549: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1551: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1553: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1554: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1556: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1557: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1511: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1514: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1518: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1506: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1509: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1550: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1508: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1510: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1543: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1548: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1552: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1540: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1517: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1559: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1539: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1512: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1516: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1505: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE  1520: categorize_axes: Failed to identify x- and y- axes in the axis list (nx_segment_001, ny_segment_001, time) of a variable being read from ./INPUT/forcing_access_yr2_8km_fill.nc
+
+
+WARNING from PE     0: MEKE_init: Initializing MEKE with a local equilibrium balance.
+
+NOTE from PE     0: MOM_restart: Unable to find MEKE_Le queried by pointer, probably because of the suspect comparison of pointers by ASSOCIATED.
+NOTE from PE     0: MOM_restart: Unknown restart variable MEKE_Le queried for initialization.
+NOTE from PE     0: MOM_vert_friction: updateCFLtruncationValue set CFL limit to    0.000E+00
+ MOM_in domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  68  68  68  68  68  68
+             68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  69  69  69
+             69  69  69  69  69  69  69  69  69  69  69  69  69  69  69
+  Y-AXIS =   34  34  34  34  34  34  34  34  34  34  34  34  33  33  33  33  33  33  33  33  33  32  33  33
+             33  33  33  33  33  33  33  34  34  34  34  34  34  34  34  34  34  34  34
+ MOM_in domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =   35  35  35  35  35  35  35  35  35  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  35  35  35  35  35  35  35  35  35
+  Y-AXIS =   17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  16  16  16  16  15  16  16
+             16  16  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17
+
+WARNING from PE     0: MOM_file_parser : SALT_RESTORE_FILE over-ridden.  Line: 'SALT_RESTORE_FILE = "salt_restore_interpolated_nearest.nc"' in file MOM_override.
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+
+WARNING from PE     0: set_date_c: Year zero is invalid. Resetting year to 1
+
+ MOM_in domain decomposition
+whalo =    0, ehalo =    0, shalo =    0, nhalo =    0
+  X-AXIS =   69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  68  68  68  68  68  68
+             68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  69  69  69
+             69  69  69  69  69  69  69  69  69  69  69  69  69  69  69
+  Y-AXIS =   34  34  34  34  34  34  34  34  34  34  34  34  33  33  33  33  33  33  33  33  33  32  33  33
+             33  33  33  33  33  33  33  34  34  34  34  34  34  34  34  34  34  34  34
+NOTE from PE     0: You are using the legacy table.
+NOTE from PE     0: data_override_mod: File data_table does not exist.
+NOTE from PE     0: data_table is empty, not doing any data_overrides
+
+WARNING from PE     0: MOM_file_parser : FATAL_UNUSED_PARAMS over-ridden.  Line: 'FATAL_UNUSED_PARAMS = False' in file MOM_override.
+
+ MOM_in domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  68  68  68  68  68  68
+             68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  69  69  69
+             69  69  69  69  69  69  69  69  69  69  69  69  69  69  69
+  Y-AXIS =   34  34  34  34  34  34  34  34  34  34  34  34  33  33  33  33  33  33  33  33  33  32  33  33
+             33  33  33  33  33  33  33  34  34  34  34  34  34  34  34  34  34  34  34
+ MOM_in domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =   35  35  35  35  35  35  35  35  35  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  35  35  35  35  35  35  35  35  35
+  Y-AXIS =   17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  16  16  16  16  15  16  16
+             16  16  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17
+ MOM_in domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  68  68  68  68  68  68
+             68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  69  69  69
+             69  69  69  69  69  69  69  69  69  69  69  69  69  69  69
+  Y-AXIS =   34  34  34  34  34  34  34  34  34  34  34  34  33  33  33  33  33  33  33  33  33  32  33  33
+             33  33  33  33  33  33  33  34  34  34  34  34  34  34  34  34  34  34  34
+ MOM_in domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =   35  35  35  35  35  35  35  35  35  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  35  35  35  35  35  35  35  35  35
+  Y-AXIS =   17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  16  16  16  16  15  16  16
+             16  16  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17
+ MOM_in domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  68  68  68  68  68  68
+             68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  69  69  69
+             69  69  69  69  69  69  69  69  69  69  69  69  69  69  69
+  Y-AXIS =   34  34  34  34  34  34  34  34  34  34  34  34  33  33  33  33  33  33  33  33  33  32  33  33
+             33  33  33  33  33  33  33  34  34  34  34  34  34  34  34  34  34  34  34
+ MOM_in domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =   35  35  35  35  35  35  35  35  35  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  35  35  35  35  35  35  35  35  35
+  Y-AXIS =   17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  16  16  16  16  15  16  16
+             16  16  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17
+ MOM_in domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  68  68  68  68  68  68
+             68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  69  69  69
+             69  69  69  69  69  69  69  69  69  69  69  69  69  69  69
+  Y-AXIS =   34  34  34  34  34  34  34  34  34  34  34  34  33  33  33  33  33  33  33  33  33  32  33  33
+             33  33  33  33  33  33  33  34  34  34  34  34  34  34  34  34  34  34  34
+ MOM_in domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =   35  35  35  35  35  35  35  35  35  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  35  35  35  35  35  35  35  35  35
+  Y-AXIS =   17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  16  16  16  16  15  16  16
+             16  16  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17
+ MOM_in domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  68  68  68  68  68  68
+             68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  69  69  69
+             69  69  69  69  69  69  69  69  69  69  69  69  69  69  69
+  Y-AXIS =   34  34  34  34  34  34  34  34  34  34  34  34  33  33  33  33  33  33  33  33  33  32  33  33
+             33  33  33  33  33  33  33  34  34  34  34  34  34  34  34  34  34  34  34
+ MOM_in domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =   35  35  35  35  35  35  35  35  35  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  35  35  35  35  35  35  35  35  35
+  Y-AXIS =   17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  16  16  16  16  15  16  16
+             16  16  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17
+ MOM_in domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  68  68  68  68  68  68
+             68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  69  69  69
+             69  69  69  69  69  69  69  69  69  69  69  69  69  69  69
+  Y-AXIS =   34  34  34  34  34  34  34  34  34  34  34  34  33  33  33  33  33  33  33  33  33  32  33  33
+             33  33  33  33  33  33  33  34  34  34  34  34  34  34  34  34  34  34  34
+ MOM_in domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =   35  35  35  35  35  35  35  35  35  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  35  35  35  35  35  35  35  35  35
+  Y-AXIS =   17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  16  16  16  16  15  16  16
+             16  16  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17
+ MOM_in domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  68  68  68  68  68  68
+             68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  69  69  69
+             69  69  69  69  69  69  69  69  69  69  69  69  69  69  69
+  Y-AXIS =   34  34  34  34  34  34  34  34  34  34  34  34  33  33  33  33  33  33  33  33  33  32  33  33
+             33  33  33  33  33  33  33  34  34  34  34  34  34  34  34  34  34  34  34
+ MOM_in domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =   35  35  35  35  35  35  35  35  35  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  35  35  35  35  35  35  35  35  35
+  Y-AXIS =   17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  16  16  16  16  15  16  16
+             16  16  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17
+ MOM_in domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  68  68  68  68  68  68
+             68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  69  69  69
+             69  69  69  69  69  69  69  69  69  69  69  69  69  69  69
+  Y-AXIS =   34  34  34  34  34  34  34  34  34  34  34  34  33  33  33  33  33  33  33  33  33  32  33  33
+             33  33  33  33  33  33  33  34  34  34  34  34  34  34  34  34  34  34  34
+ MOM_in domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =   35  35  35  35  35  35  35  35  35  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  35  35  35  35  35  35  35  35  35
+  Y-AXIS =   17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  16  16  16  16  15  16  16
+             16  16  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17
+ MOM_in domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  68  68  68  68  68  68
+             68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  69  69  69
+             69  69  69  69  69  69  69  69  69  69  69  69  69  69  69
+  Y-AXIS =   34  34  34  34  34  34  34  34  34  34  34  34  33  33  33  33  33  33  33  33  33  32  33  33
+             33  33  33  33  33  33  33  34  34  34  34  34  34  34  34  34  34  34  34
+ MOM_in domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =   35  35  35  35  35  35  35  35  35  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  35  35  35  35  35  35  35  35  35
+  Y-AXIS =   17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  16  16  16  16  15  16  16
+             16  16  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17
+ MOM_in domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  68  68  68  68  68  68
+             68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  69  69  69
+             69  69  69  69  69  69  69  69  69  69  69  69  69  69  69
+  Y-AXIS =   34  34  34  34  34  34  34  34  34  34  34  34  33  33  33  33  33  33  33  33  33  32  33  33
+             33  33  33  33  33  33  33  34  34  34  34  34  34  34  34  34  34  34  34
+ MOM_in domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =   35  35  35  35  35  35  35  35  35  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  35  35  35  35  35  35  35  35  35
+  Y-AXIS =   17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  16  16  16  16  15  16  16
+             16  16  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17
+ MOM_in domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  68  68  68  68  68  68
+             68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  69  69  69
+             69  69  69  69  69  69  69  69  69  69  69  69  69  69  69
+  Y-AXIS =   34  34  34  34  34  34  34  34  34  34  34  34  33  33  33  33  33  33  33  33  33  32  33  33
+             33  33  33  33  33  33  33  34  34  34  34  34  34  34  34  34  34  34  34
+ MOM_in domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =   35  35  35  35  35  35  35  35  35  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  35  35  35  35  35  35  35  35  35
+  Y-AXIS =   17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  16  16  16  16  15  16  16
+             16  16  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17
+ MOM_in domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  68  68  68  68  68  68
+             68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  69  69  69
+             69  69  69  69  69  69  69  69  69  69  69  69  69  69  69
+  Y-AXIS =   34  34  34  34  34  34  34  34  34  34  34  34  33  33  33  33  33  33  33  33  33  32  33  33
+             33  33  33  33  33  33  33  34  34  34  34  34  34  34  34  34  34  34  34
+ MOM_in domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =   35  35  35  35  35  35  35  35  35  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  35  35  35  35  35  35  35  35  35
+  Y-AXIS =   17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  16  16  16  16  15  16  16
+             16  16  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17
+ MOM_in domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  68  68  68  68  68  68
+             68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  69  69  69
+             69  69  69  69  69  69  69  69  69  69  69  69  69  69  69
+  Y-AXIS =   34  34  34  34  34  34  34  34  34  34  34  34  33  33  33  33  33  33  33  33  33  32  33  33
+             33  33  33  33  33  33  33  34  34  34  34  34  34  34  34  34  34  34  34
+ MOM_in domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =   35  35  35  35  35  35  35  35  35  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  35  35  35  35  35  35  35  35  35
+  Y-AXIS =   17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  16  16  16  16  15  16  16
+             16  16  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17
+ MOM_in domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  68  68  68  68  68  68
+             68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  69  69  69
+             69  69  69  69  69  69  69  69  69  69  69  69  69  69  69
+  Y-AXIS =   34  34  34  34  34  34  34  34  34  34  34  34  33  33  33  33  33  33  33  33  33  32  33  33
+             33  33  33  33  33  33  33  34  34  34  34  34  34  34  34  34  34  34  34
+ MOM_in domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =   35  35  35  35  35  35  35  35  35  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  35  35  35  35  35  35  35  35  35
+  Y-AXIS =   17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  16  16  16  16  15  16  16
+             16  16  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17
+ MOM_in domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  68  68  68  68  68  68
+             68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  69  69  69
+             69  69  69  69  69  69  69  69  69  69  69  69  69  69  69
+  Y-AXIS =   34  34  34  34  34  34  34  34  34  34  34  34  33  33  33  33  33  33  33  33  33  32  33  33
+             33  33  33  33  33  33  33  34  34  34  34  34  34  34  34  34  34  34  34
+ MOM_in domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =   35  35  35  35  35  35  35  35  35  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  35  35  35  35  35  35  35  35  35
+  Y-AXIS =   17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  16  16  16  16  15  16  16
+             16  16  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17
+ MOM_in domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  68  68  68  68  68  68
+             68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  69  69  69
+             69  69  69  69  69  69  69  69  69  69  69  69  69  69  69
+  Y-AXIS =   34  34  34  34  34  34  34  34  34  34  34  34  33  33  33  33  33  33  33  33  33  32  33  33
+             33  33  33  33  33  33  33  34  34  34  34  34  34  34  34  34  34  34  34
+ MOM_in domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =   35  35  35  35  35  35  35  35  35  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  35  35  35  35  35  35  35  35  35
+  Y-AXIS =   17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  16  16  16  16  15  16  16
+             16  16  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17
+ MOM_in domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  68  68  68  68  68  68
+             68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  69  69  69
+             69  69  69  69  69  69  69  69  69  69  69  69  69  69  69
+  Y-AXIS =   34  34  34  34  34  34  34  34  34  34  34  34  33  33  33  33  33  33  33  33  33  32  33  33
+             33  33  33  33  33  33  33  34  34  34  34  34  34  34  34  34  34  34  34
+ MOM_in domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =   35  35  35  35  35  35  35  35  35  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  35  35  35  35  35  35  35  35  35
+  Y-AXIS =   17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  16  16  16  16  15  16  16
+             16  16  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17
+ MOM_in domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  68  68  68  68  68  68
+             68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  69  69  69
+             69  69  69  69  69  69  69  69  69  69  69  69  69  69  69
+  Y-AXIS =   34  34  34  34  34  34  34  34  34  34  34  34  33  33  33  33  33  33  33  33  33  32  33  33
+             33  33  33  33  33  33  33  34  34  34  34  34  34  34  34  34  34  34  34
+ MOM_in domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =   35  35  35  35  35  35  35  35  35  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  35  35  35  35  35  35  35  35  35
+  Y-AXIS =   17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  16  16  16  16  15  16  16
+             16  16  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17
+ MOM_in domain decomposition
+whalo =    4, ehalo =    4, shalo =    4, nhalo =    4
+  X-AXIS =   69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  69  68  68  68  68  68  68
+             68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  68  69  69  69
+             69  69  69  69  69  69  69  69  69  69  69  69  69  69  69
+  Y-AXIS =   34  34  34  34  34  34  34  34  34  34  34  34  33  33  33  33  33  33  33  33  33  32  33  33
+             33  33  33  33  33  33  33  34  34  34  34  34  34  34  34  34  34  34  34
+ MOM_in domain decomposition
+whalo =    2, ehalo =    2, shalo =    2, nhalo =    2
+  X-AXIS =   35  35  35  35  35  35  35  35  35  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34  34
+             34  34  34  34  34  34  35  35  35  35  35  35  35  35  35
+  Y-AXIS =   17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  16  16  16  16  15  16  16
+             16  16  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17  17
+NOTE from PE     0: MOM_vert_friction: updateCFLtruncationValue set CFL limit to    4.875E-02
+NOTE from PE     0: MOM_vert_friction: updateCFLtruncationValue set CFL limit to    9.500E-02
+NOTE from PE     0: MOM_vert_friction: updateCFLtruncationValue set CFL limit to    1.388E-01
+NOTE from PE     0: MOM_vert_friction: updateCFLtruncationValue set CFL limit to    1.800E-01
+NOTE from PE     0: MOM_vert_friction: updateCFLtruncationValue set CFL limit to    2.188E-01
+NOTE from PE     0: MOM_vert_friction: updateCFLtruncationValue set CFL limit to    2.550E-01
+NOTE from PE     0: MOM_vert_friction: updateCFLtruncationValue set CFL limit to    2.887E-01
+NOTE from PE     0: MOM_vert_friction: updateCFLtruncationValue set CFL limit to    3.200E-01
+NOTE from PE     0: MOM_vert_friction: updateCFLtruncationValue set CFL limit to    3.488E-01
+NOTE from PE     0: MOM_vert_friction: updateCFLtruncationValue set CFL limit to    3.750E-01
+NOTE from PE     0: MOM_vert_friction: updateCFLtruncationValue set CFL limit to    3.988E-01
+NOTE from PE     0: MOM_vert_friction: updateCFLtruncationValue set CFL limit to    4.200E-01
+NOTE from PE     0: MOM_vert_friction: updateCFLtruncationValue set CFL limit to    4.388E-01
+NOTE from PE     0: MOM_vert_friction: updateCFLtruncationValue set CFL limit to    4.550E-01
+NOTE from PE     0: MOM_vert_friction: updateCFLtruncationValue set CFL limit to    4.688E-01
+NOTE from PE     0: MOM_vert_friction: updateCFLtruncationValue set CFL limit to    4.800E-01
+NOTE from PE     0: MOM_vert_friction: updateCFLtruncationValue set CFL limit to    4.888E-01
+NOTE from PE     0: MOM_vert_friction: updateCFLtruncationValue set CFL limit to    4.950E-01
+NOTE from PE     0: MOM_vert_friction: updateCFLtruncationValue set CFL limit to    4.987E-01
+NOTE from PE     0: MOM_vert_friction: updateCFLtruncationValue set CFL limit to    5.000E-01
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+  max rss=1329135616.0 MB
+
+WARNING from PE     0: End of MOM_main reached with inconsistent dynamics and advective times.  Additional restart fields that have not been coded yet would be required for reproducibility.
+
+
+FATAL from PE     0: ocean_model_restart was called with unused buoyancy fluxes.  For conservation, the ocean restart files can only be created after the buoyancy forcing is applied.
+

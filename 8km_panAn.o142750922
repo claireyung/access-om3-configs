@@ -1,0 +1,58 @@
+laboratory path:  /scratch/x77/cy8964/access-om3
+binary path:  /scratch/x77/cy8964/access-om3/bin
+input path:  /scratch/x77/cy8964/access-om3/input
+work path:  /scratch/x77/cy8964/access-om3/work
+archive path:  /scratch/x77/cy8964/access-om3/archive
+Metadata and UUID generation is disabled. Experiment name used for archival: 8km_jra_ryf_obc2-sapphirerapid-Charrassin2
+nruns: 1 nruns_per_submit: 1 subrun: 1
+payu: work path already exists.
+      Sweeping as --force option is True.
+Removing work path /scratch/x77/cy8964/access-om3/work/8km_jra_ryf_obc2-sapphirerapid-Charrassin2
+Removing symlink /home/156/cy8964/mom6-control/access-rom3/8km_jra_ryf_obc2-sapphirerapid-Charrassin2/work
+payu: Found modules in /opt/Modules/v4.3.0
+Loading input manifest: manifests/input.yaml
+Loading restart manifest: manifests/restart.yaml
+Loading exe manifest: manifests/exe.yaml
+Setting up access-om3
+Checking exe, input and restart manifests
+Writing manifests/restart.yaml
+/usr/bin/bash /g/data/vk83/apps/om3-scripts/payu_config/setup.sh
+mod access-om3-nuopc/0.4.1-mdludj4
+mod access-om3/pr75-1
+mod nco/5.0.5
+git add /home/156/cy8964/mom6-control/access-rom3/8km_jra_ryf_obc2-sapphirerapid-Charrassin2/config.yaml
+git add /home/156/cy8964/mom6-control/access-rom3/8km_jra_ryf_obc2-sapphirerapid-Charrassin2/drv_in
+git add /home/156/cy8964/mom6-control/access-rom3/8km_jra_ryf_obc2-sapphirerapid-Charrassin2/fd.yaml
+git add /home/156/cy8964/mom6-control/access-rom3/8km_jra_ryf_obc2-sapphirerapid-Charrassin2/nuopc.runconfig
+git add /home/156/cy8964/mom6-control/access-rom3/8km_jra_ryf_obc2-sapphirerapid-Charrassin2/nuopc.runseq
+git add /home/156/cy8964/mom6-control/access-rom3/8km_jra_ryf_obc2-sapphirerapid-Charrassin2/input.nml
+git add /home/156/cy8964/mom6-control/access-rom3/8km_jra_ryf_obc2-sapphirerapid-Charrassin2/diag_table
+git add /home/156/cy8964/mom6-control/access-rom3/8km_jra_ryf_obc2-sapphirerapid-Charrassin2/ice_in
+git add /home/156/cy8964/mom6-control/access-rom3/8km_jra_ryf_obc2-sapphirerapid-Charrassin2/datm_in
+git add /home/156/cy8964/mom6-control/access-rom3/8km_jra_ryf_obc2-sapphirerapid-Charrassin2/datm.streams.xml
+git add /home/156/cy8964/mom6-control/access-rom3/8km_jra_ryf_obc2-sapphirerapid-Charrassin2/drof_in
+git add /home/156/cy8964/mom6-control/access-rom3/8km_jra_ryf_obc2-sapphirerapid-Charrassin2/drof.streams.xml
+git add /home/156/cy8964/mom6-control/access-rom3/8km_jra_ryf_obc2-sapphirerapid-Charrassin2/MOM_input
+git add /home/156/cy8964/mom6-control/access-rom3/8km_jra_ryf_obc2-sapphirerapid-Charrassin2/MOM_override
+git add manifests/input.yaml
+git add manifests/restart.yaml
+git add manifests/exe.yaml
+git commit -am "2025-06-10 21:34:54: Run 0"
+mpirun  -wdir /scratch/x77/cy8964/access-om3/work/8km_jra_ryf_obc2-sapphirerapid-Charrassin2 -np 1976  /scratch/x77/cy8964/access-om3/work/8km_jra_ryf_obc2-sapphirerapid-Charrassin2/access-om3-MOM6-CICE6
+/home/156/cy8964/mom6-control/access-rom3/8km_jra_ryf_obc2-sapphirerapid-Charrassin2/access-om3.err /scratch/x77/cy8964/access-om3/archive/8km_jra_ryf_obc2-sapphirerapid-Charrassin2/error_logs/access-om3.142750922.gadi-pbs.err
+/home/156/cy8964/mom6-control/access-rom3/8km_jra_ryf_obc2-sapphirerapid-Charrassin2/access-om3.out /scratch/x77/cy8964/access-om3/archive/8km_jra_ryf_obc2-sapphirerapid-Charrassin2/error_logs/access-om3.142750922.gadi-pbs.out
+/home/156/cy8964/mom6-control/access-rom3/8km_jra_ryf_obc2-sapphirerapid-Charrassin2/job.yaml /scratch/x77/cy8964/access-om3/archive/8km_jra_ryf_obc2-sapphirerapid-Charrassin2/error_logs/job.142750922.gadi-pbs.yaml
+/home/156/cy8964/mom6-control/access-rom3/8km_jra_ryf_obc2-sapphirerapid-Charrassin2/env.yaml /scratch/x77/cy8964/access-om3/archive/8km_jra_ryf_obc2-sapphirerapid-Charrassin2/error_logs/env.142750922.gadi-pbs.yaml
+
+======================================================================================
+                  Resource Usage on 2025-06-11 02:51:25:
+   Job Id:             142750922.gadi-pbs
+   Project:            x77
+   Exit Status:        1
+   Service Units:      20760.08
+   NCPUs Requested:    1976                   NCPUs Used: 1976            
+                                           CPU Time Used: 9901:37:28      
+   Memory Requested:   7.72TB                Memory Used: 1.55TB          
+   Walltime requested: 08:00:00            Walltime Used: 05:15:11        
+   JobFS requested:    10.0GB                 JobFS used: 8.32MB          
+======================================================================================
