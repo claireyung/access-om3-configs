@@ -10,7 +10,6 @@
   history_chunksize = 720, 186
   history_precision = 8
   restart_deflate = 1
-  restart_ext = .true.
   ice_ic = 'none' 
   lcdf64 = .false.
   npt = 35040
