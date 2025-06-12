@@ -338,7 +338,7 @@ ICE_modelio::
      pio_rearranger = 1
      pio_root = 1
      pio_stride = 1
-     pio_typename = netcdf4p
+     pio_typename = netcdf
 ::
 
 OCN_modelio::
