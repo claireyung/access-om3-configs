@@ -525,3 +525,8 @@ nuopc.runseq corner number 450 (coupling timestep)
 I tried to change `ndtd` and `dt` in `ice_in` to force CICE to use a different timestep (default is the coupling timestepm, you can see this in `work/log/ice.log`. However I got a lot of segfaults when I changed the ice timesteps (straight away on initialisation) so the most stable configuration is just to run it like this. However, the ocean component has CFLs of 0.2ish which is quite low suggesting it could be improved.
 
 After the first year of simulation on CL, I decided to try again and add `ndtd = 3`, `DT_THERM = 1200`, `DT = 600`, coupling timestep 600. This seems to be working well and in ran for the second year a bit cheaper than the first. I am not sure why I was getting so many segfaults before, but I think it is best to optimise for the stable one without sporadic segfaults that I can't explain..
+
+A further restriction on timesteps for future reference is that 
+1. we want the timesteps to all go into 1 day and ideally into 1 hour since almost all runlengths will be integer multiples of those. So 450, 600, 900 all good. Also, they need to be multiples of each other and match at the restart time, otherwise you get an unused buoyancy flux crash https://github.com/ACCESS-NRI/access-om3-configs/pull/556#issuecomment-2939907442
+2. the coupling timestep cannot be 3x dt, then you have a problem https://github.com/ACCESS-NRI/access-om3-configs/issues/380 for unknown reasons
+3. the thermodynamic timestep cannot be too long from past experience with the MOM6 panan https://github.com/COSIMA/mom6-panan/issues/28
