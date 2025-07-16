@@ -1,0 +1,58 @@
+laboratory path:  /scratch/x77/cy8964/access-om3
+binary path:  /scratch/x77/cy8964/access-om3/bin
+input path:  /scratch/x77/cy8964/access-om3/input
+work path:  /scratch/x77/cy8964/access-om3/work
+archive path:  /scratch/x77/cy8964/access-om3/archive
+Metadata and UUID generation is disabled. Experiment name used for archival: test-new-exe-sr
+nruns: 1 nruns_per_submit: 1 subrun: 1
+payu: Found modules in /opt/Modules/v4.3.0
+Loading input manifest: manifests/input.yaml
+Loading restart manifest: manifests/restart.yaml
+Loading exe manifest: manifests/exe.yaml
+Setting up access-om3
+Checking exe, input and restart manifests
+Writing manifests/restart.yaml
+Writing manifests/exe.yaml
+/usr/bin/bash /g/data/vk83/apps/om3-scripts/payu_config/setup.sh
+mod access3/2025.03.1-yzxxwep
+mod access-om3/pr120-16
+mod nco/5.0.5
+git add /home/156/cy8964/mom6-control/access-rom3/test-new-exe-sr/config.yaml
+git add /home/156/cy8964/mom6-control/access-rom3/test-new-exe-sr/drv_in
+git add /home/156/cy8964/mom6-control/access-rom3/test-new-exe-sr/fd.yaml
+git add /home/156/cy8964/mom6-control/access-rom3/test-new-exe-sr/nuopc.runconfig
+git add /home/156/cy8964/mom6-control/access-rom3/test-new-exe-sr/nuopc.runseq
+git add /home/156/cy8964/mom6-control/access-rom3/test-new-exe-sr/input.nml
+git add /home/156/cy8964/mom6-control/access-rom3/test-new-exe-sr/diag_table
+git add /home/156/cy8964/mom6-control/access-rom3/test-new-exe-sr/ice_in
+git add /home/156/cy8964/mom6-control/access-rom3/test-new-exe-sr/datm_in
+git add /home/156/cy8964/mom6-control/access-rom3/test-new-exe-sr/datm.streams.xml
+git add /home/156/cy8964/mom6-control/access-rom3/test-new-exe-sr/drof_in
+git add /home/156/cy8964/mom6-control/access-rom3/test-new-exe-sr/drof.streams.xml
+git add /home/156/cy8964/mom6-control/access-rom3/test-new-exe-sr/MOM_input
+git add /home/156/cy8964/mom6-control/access-rom3/test-new-exe-sr/MOM_override
+git add /home/156/cy8964/mom6-control/access-rom3/test-new-exe-sr/MOM_override_newparams
+git add manifests/input.yaml
+git add manifests/restart.yaml
+git add manifests/exe.yaml
+git commit -am "2025-07-16 14:25:15: Run 0"
+mpirun  -wdir /scratch/x77/cy8964/access-om3/work/test-new-exe-sr -np 1664  /scratch/x77/cy8964/access-om3/work/test-new-exe-sr/access-om3-MOM6-CICE6
+/home/156/cy8964/mom6-control/access-rom3/test-new-exe-sr/access-om3.err /scratch/x77/cy8964/access-om3/archive/test-new-exe-sr/error_logs/access-om3.145360487.gadi-pbs.err
+/home/156/cy8964/mom6-control/access-rom3/test-new-exe-sr/access-om3.out /scratch/x77/cy8964/access-om3/archive/test-new-exe-sr/error_logs/access-om3.145360487.gadi-pbs.out
+/home/156/cy8964/mom6-control/access-rom3/test-new-exe-sr/job.yaml /scratch/x77/cy8964/access-om3/archive/test-new-exe-sr/error_logs/job.145360487.gadi-pbs.yaml
+/home/156/cy8964/mom6-control/access-rom3/test-new-exe-sr/env.yaml /scratch/x77/cy8964/access-om3/archive/test-new-exe-sr/error_logs/env.145360487.gadi-pbs.yaml
+payu: warning: Assuming that resub.sh is a bash script based on the filename extension.
+/bin/bash /home/156/cy8964/mom6-control/access-rom3/test-new-exe-sr/resub.sh
+
+======================================================================================
+                  Resource Usage on 2025-07-16 14:26:20:
+   Job Id:             145360487.gadi-pbs
+   Project:            x77
+   Exit Status:        1
+   Service Units:      67.48
+   NCPUs Requested:    1664                   NCPUs Used: 1664            
+                                           CPU Time Used: 18:11:51        
+   Memory Requested:   7.81TB                Memory Used: 364.55GB        
+   Walltime requested: 01:00:00            Walltime Used: 00:01:13        
+   JobFS requested:    10.0GB                 JobFS used: 8.32MB          
+======================================================================================

@@ -1,0 +1,6 @@
+Loading access-om3/pr120-16
+  Loading requirement: access3/2025.03.1-yzxxwep
+Currently Loaded Modulefiles:
+ 1) access3/2025.03.1-yzxxwep   3) nco/5.0.5               5) pbs  
+ 2) access-om3/pr120-16         4) openmpi/4.1.7-5kn4pgy  
+payu: Model exited with error code 152; aborting.
