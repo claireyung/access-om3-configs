@@ -40,7 +40,7 @@ SURFACE_PRESSURE_SCALE = 8986.6 !! Ensure this is DENSITY_ICE X G_EARTH
 #override DTFREEZE_DP = -7.75E-08  
 #override WRITE_GEOM = 1
 #override Z_INIT_REMAP_GENERAL = True
-#override PRESSURE_RECONSTRUCTION_SCHEME = 2
+!#override PRESSURE_RECONSTRUCTION_SCHEME = 2
 
 #override HARMONIC_VISC = True
 
@@ -49,3 +49,11 @@ SURFACE_PRESSURE_SCALE = 8986.6 !! Ensure this is DENSITY_ICE X G_EARTH
 !#override DEBUG_CHKSUMS = False
 !#override SHELF_S_ROOT = True
 !#override ICE_SHELF_BUOYANCY_FLUX_ITT_BUG = False
+
+!Turn on layer mode
+#override USE_REGRIDDING = False
+#override ENERGETICS_SFC_PBL = False
+#override BULKMIXEDLAYER = True
+#override MIXEDLAYER_RESTRAT = True
+#override HMIX_MIN = 10.0
+#override SAVE_INITIAL_CONDS = True
