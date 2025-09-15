@@ -146,6 +146,11 @@ work/INPUT/tideamp_Charrassin_nocavity_cropped.nc:
   hashes:
     binhash: 30f2762faf5cb24f94afccc584c5ec09
     md5: e714813b1e4bd46dff7936cd86b15366
+work/INPUT/topog_Charrassin_nocavity_cropped.nc:
+  fullpath: /g/data/x77/cy8964/mom6/input/input-8km/topog_Charrassin_nocavity_cropped.nc
+  hashes:
+    binhash: b876d79c6a91910def76349d07c65a4f
+    md5: 48bd279b3301e9f41f4aa38030f9ee68
 work/INPUT/topog_Charrassin_open_cavity_noGL5m_new190825.nc:
   fullpath: /g/data/x77/cy8964/mom6/input/input-8km/topog_Charrassin_open_cavity_noGL5m_new190825.nc
   hashes:
