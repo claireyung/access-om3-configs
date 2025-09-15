@@ -111,6 +111,11 @@ work/INPUT/forcing_access_yr2_8km_fill.nc:
   hashes:
     binhash: 9f1cce5f9ee771acf098ceb58de7f5dc
     md5: 08ea05256043a07e62a5aea57e0f816d
+work/INPUT/ice_thickness_Charrassin_regridded_cropped_add_area_150925.nc:
+  fullpath: /g/data/x77/cy8964/mom6/input/input-8km/150925/ice_thickness_Charrassin_regridded_cropped_add_area_150925.nc
+  hashes:
+    binhash: f78153a852de939e8f1642dd8f59582e
+    md5: 075d4226aff5e9cb5f34d24bf49e495b
 work/INPUT/ice_thickness_Charrassin_regridded_cropped_add_area_where_iceelev_noGL5m_ADDHMASKFILLTHICK_190825.nc:
   fullpath: /g/data/x77/cy8964/mom6/input/input-8km/ice_thickness_Charrassin_regridded_cropped_add_area_where_iceelev_noGL5m_ADDHMASKFILLTHICK_190825.nc
   hashes:
