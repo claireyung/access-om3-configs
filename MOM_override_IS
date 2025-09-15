@@ -57,3 +57,4 @@ SURFACE_PRESSURE_SCALE = 8986.6 !! Ensure this is DENSITY_ICE X G_EARTH
 #override MIXEDLAYER_RESTRAT = True
 #override HMIX_MIN = 10.0
 #override SAVE_INITIAL_CONDS = True
+#override BULK_RI_ML = 0.05
