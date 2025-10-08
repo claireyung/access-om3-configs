@@ -49,3 +49,6 @@ SURFACE_PRESSURE_SCALE = 8986.6 !! Ensure this is DENSITY_ICE X G_EARTH
 !#override DEBUG_CHKSUMS = False
 !#override SHELF_S_ROOT = True
 !#override ICE_SHELF_BUOYANCY_FLUX_ITT_BUG = False
+
+!Turn off frazil in ice shelf
+#override FRAZIL_NOT_UNDER_ICESHELF = True
