@@ -29,7 +29,7 @@
 #override TIDEAMP_FILE = "tideamp_Charrassin_cavity_cropped.nc" 
 
 !save time for restart runs
-#override SAVE_INITIAL_CONDS =  True
+!#override SAVE_INITIAL_CONDS =  True
 
 ! Add OBCs
 ! === module MOM_open_boundary ===
