@@ -45,6 +45,8 @@ input:
 - /g/data/tm70/cy8964/mom6/input/input-8km/forcing_access_yr2_8km_fill.nc
 - /g/data/tm70/cy8964/mom6/input/input-8km/diag_rho2.nc
 - /g/data/tm70/cy8964/mom6/input/input-8km/150925/ice_thickness_Charrassin_regridded_cropped_add_area_where_iceelev_noGL5m_ADDHMASKFILLTHICK_150925.nc
+- /g/data/x77/cy8964/mom6/input/input-8km/bottom_roughness_extended_into_cavity_74Sedit.nc
+- /g/data/x77/cy8964/mom6/input/input-8km/tideamp_Charrassin_cavity_cropped.nc
 
 collate:
   restart: true

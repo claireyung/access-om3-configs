@@ -23,13 +23,13 @@
 #override TRIPOLAR_N = False
 !#override AUTO_IO_LAYOUT_FAC = 1 ! Slows model down but it means coordinates are not NaNs
 
-#override READ_TIDEAMP = False
-#override INT_TIDE_DISSIPATION = False
-!#override H2_FILE = "bottom_roughness_extended_into_cavity.nc"
-!#override TIDEAMP_FILE = "tideamp_Charrassin_cavity_cropped.nc" 
+#override READ_TIDEAMP = True
+#override INT_TIDE_DISSIPATION = True
+#override H2_FILE = "bottom_roughness_extended_into_cavity_74Sedit.nc"
+#override TIDEAMP_FILE = "tideamp_Charrassin_cavity_cropped.nc" 
 
 !save time for restart runs
-#override SAVE_INITIAL_CONDS = False ! True
+#override SAVE_INITIAL_CONDS =  True
 
 ! Add OBCs
 ! === module MOM_open_boundary ===

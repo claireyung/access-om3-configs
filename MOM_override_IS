@@ -3,7 +3,8 @@ SHELF_INSULATOR = False
 SHELF_THERMO = True
 ICE_SHELF_TEMPERATURE = -20.0
 DENSITY_ICE = 917.
-USTAR_SHELF_BG = 0.001
+USTAR_SHELF_BG = 0.0006 !Jourdain value
+CDRAG_SHELF = 0.0015 !HJ99 value
 ICE_PROFILE_CONFIG = "FILE"
 ICE_THICKNESS_FILE ="ice_thickness_Charrassin_regridded_cropped_add_area_where_iceelev_noGL5m_ADDHMASKFILLTHICK_150925.nc"
 ICE_THICKNESS_VARNAME = "thick"
@@ -52,3 +53,5 @@ SURFACE_PRESSURE_SCALE = 8986.6 !! Ensure this is DENSITY_ICE X G_EARTH
 
 !Turn off frazil in ice shelf
 #override FRAZIL_NOT_UNDER_ICESHELF = True
+!Set ice shelf ustar scaling factor
+#override ICE_SHELF_TIDEAMP_SCALING_FACTOR = 0.66
