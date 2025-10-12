@@ -11,8 +11,8 @@
 #override MASK_SRESTORE = True
 
 
-#override DT =450 !400 ! 300 !200 !600
-#override DT_THERM = 450 ! 400 ! 300 ! 200 ! 1200 !ideally shorten from 3600 due to adele's OBC issue in MOM6-SIS2 panan
+#override DT =400 !400 ! 300 !200 !600
+#override DT_THERM = 800 ! 400 ! 300 ! 200 ! 1200 !ideally shorten from 3600 due to adele's OBC issue in MOM6-SIS2 panan
 
 #override NIGLOBAL = 4320
 #override NJGLOBAL = 1442
@@ -29,7 +29,7 @@
 #override TIDEAMP_FILE = "tideamp_Charrassin_cavity_cropped.nc" 
 
 !save time for restart runs
-!#override SAVE_INITIAL_CONDS =  True
+#override SAVE_INITIAL_CONDS = False ! True
 
 ! Add OBCs
 ! === module MOM_open_boundary ===
