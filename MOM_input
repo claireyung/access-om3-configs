@@ -720,6 +720,8 @@ ICE_AREA_VARNAME = "area"       ! default = "area_shelf_h"
                                 ! The name of the area variable in ICE_THICKNESS_FILE.
 ! === module MOM_domains ===
 AUTO_MASKTABLE = False
+LAYOUT = 84,49
+IO_LAYOUT = 12,7
 MASKTABLE = "mask_table.1490.84x49"
 ! This section contains non default debugging parameters which are set.
 ! ------------------------
@@ -743,4 +745,4 @@ SAVE_INITIAL_CONDS = False
 
 !----------- Performance Modifications ---
 PARALLEL_RESTARTFILES = True
-AUTO_IO_LAYOUT_FAC = 7
+!AUTO_IO_LAYOUT_FAC = 7
