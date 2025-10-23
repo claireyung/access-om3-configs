@@ -742,4 +742,4 @@ SAVE_INITIAL_CONDS = False
 
 !----------- Performance Modifications ---
 PARALLEL_RESTARTFILES = True
-
+AUTO_IO_LAYOUT_FAC = 5
