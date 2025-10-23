@@ -14,7 +14,7 @@ sync:
   restart: true
 
 queue: normalsr
-ncpus: 2964
+ncpus: 3016
 jobfs: 10GB
 mem: 14500GB
 
