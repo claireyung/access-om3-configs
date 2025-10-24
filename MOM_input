@@ -741,7 +741,7 @@ INT_TIDE_DISSIPATION = True
 H2_FILE = "bottom_roughness_extended_into_cavity_74Sedit.nc"
 TIDEAMP_FILE = "tideamp_Charrassin_cavity_cropped.nc"
 
-SAVE_INITIAL_CONDS = False
+SAVE_INITIAL_CONDS = True
 
 !----------- Performance Modifications ---
 PARALLEL_RESTARTFILES = True
