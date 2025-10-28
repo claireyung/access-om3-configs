@@ -4,11 +4,11 @@
 USE_REGRIDDING = True           !   [Boolean] default = False
                                 ! If True, use the ALE algorithm (regridding/remapping). If False, use the
                                 ! layered isopycnal algorithm.
-DT = 150.0                      !   [s]
+DT = 100.0                      !   [s]
                                 ! The (baroclinic) dynamics time step.  The time-step that is actually used will
                                 ! be an integer fraction of the forcing time-step (DT_FORCING in ocean-only mode
                                 ! or the coupling timestep in coupled mode.)
-DT_THERM = 150.0
+DT_THERM = 100.0
 THERMO_SPANS_COUPLING = True    !   [Boolean] default = False
                                 ! If true, the MOM will take thermodynamic timesteps that can be longer than the
                                 ! coupling timestep. The actual thermodynamic timestep that is used in this case
@@ -636,7 +636,7 @@ CHECK_DIFFUSIVE_CFL = True      !   [Boolean] default = False
                                 ! of 1 or MAX_TR_DIFFUSION_CFL iteration.
 
 ! === module MOM_sum_output ===
-MAXTRUNC = 10000                !   [truncations save_interval-1] default = 0
+MAXTRUNC = 100000                !   [truncations save_interval-1] default = 0
                                 ! The run will be stopped, and the day set to a very large value if the velocity
                                 ! is truncated more than MAXTRUNC times between energy saves.  Set MAXTRUNC to 0
                                 ! to stop if there is any truncation of velocities.
