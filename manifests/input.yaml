@@ -71,11 +71,11 @@ work/INPUT/RYF.vas.1990_1991.nc:
   hashes:
     binhash: d15ca562e37e82fb2d31657701f0a560
     md5: 88dc8c70338bbc8f5efc48ed0009a99f
-work/INPUT/Yamazaki_ACCESS-OM2_IC_LarsenWeddelledits.nc:
-  fullpath: /g/data/x77/cy8964/mom6/input/input-8km/Yamazaki_ACCESS-OM2_IC_LarsenWeddelledits.nc
+work/INPUT/Yamazaki_ACCESS-OM2_IC_LarsenWeddellRossedits.nc:
+  fullpath: /g/data/x77/cy8964/mom6/input/input-8km/Yamazaki_ACCESS-OM2_IC_LarsenWeddellRossedits.nc
   hashes:
-    binhash: bc0b7c7a83bce3385af3cda33163e1fc
-    md5: 96f6b476892b1bd34436b16065777510
+    binhash: a8c74def1306044d682b5ae7477ba498
+    md5: cd03b7baea151a774c1f563ab94d3522
 work/INPUT/access-om3-8km-ESMFmesh_Charrassin_nocavity_cropped.nc:
   fullpath: /g/data/tm70/cy8964/mom6/input/input-8km/150925/access-om3-8km-ESMFmesh_Charrassin_nocavity_cropped.nc
   hashes:
