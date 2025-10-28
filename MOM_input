@@ -746,3 +746,5 @@ SAVE_INITIAL_CONDS = True
 !----------- Performance Modifications ---
 PARALLEL_RESTARTFILES = True
 !AUTO_IO_LAYOUT_FAC = 7
+
+DEBUG = True
