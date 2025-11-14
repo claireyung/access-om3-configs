@@ -9,8 +9,9 @@ shortpath: /scratch/x77
 # Using payu sync is recommend to copy data from ephemeral scratch space to 
 # longer term storage
 sync:
-  enable: true   # set path below and change to true
-  path: /g/data/x77/cy8964/access-om3/archive/ice_shelf_panan-PR-061025-nofrazilshelf-tideson-newICs       # Set to location on /g/data (e.g. /g/data/PROJECT/USER/EXPERIMENT)
+  enable: false   # set path below and change to true
+  path: 
+  #    /g/data/x77/cy8964/access-om3/archive/ice_shelf_panan-PR-061025-nofrazilshelf-tideson-newICs           # Set to location on /g/data (e.g. /g/data/PROJECT/USER/EXPERIMENT)
   restart: true
 
 queue: normalsr
@@ -84,3 +85,5 @@ payu_minimum_version: 1.1.6
 platform:
   nodesize: 104
   nodemem: 512
+restart: 
+  /scratch/x77/cy8964/access-om3/archive/ice_shelf_panan-PR-061025-nofrazilshelf-tideson-newICs/restart047
