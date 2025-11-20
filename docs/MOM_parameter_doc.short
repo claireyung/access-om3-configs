@@ -18,11 +18,11 @@ THERMO_SPANS_COUPLING = True    !   [Boolean] default = False
                                 ! coupling timestep. The actual thermodynamic timestep that is used in this case
                                 ! is the largest integer multiple of the coupling timestep that is less than or
                                 ! equal to DT_THERM.
-HMIX_SFC_PROP = 3.0             !   [m] default = 1.0
+HMIX_SFC_PROP = 2.0             !   [m] default = 1.0
                                 ! If BULKMIXEDLAYER is false, HMIX_SFC_PROP is the depth over which to average
                                 ! to find surface properties like SST and SSS or density (but not surface
                                 ! velocities).
-HMIX_UV_SFC_PROP = 3.0          !   [m] default = 0.0
+HMIX_UV_SFC_PROP = 2.0          !   [m] default = 0.0
                                 ! If BULKMIXEDLAYER is false, HMIX_UV_SFC_PROP is the depth over which to
                                 ! average to find surface flow properties, SSU, SSV. A non-positive value
                                 ! indicates no averaging.
@@ -701,7 +701,7 @@ DENSITY_ICE = 917.0             !   [kg m-3] default = 900.0
                                 ! A typical density of ice.
 USTAR_SHELF_BG = 6.0E-04        !   [m s-1] default = 0.0
                                 ! The minimum value of ustar under ice shelves.
-CDRAG_SHELF = 0.006             !   [nondim] default = 0.003
+CDRAG_SHELF = 0.007             !   [nondim] default = 0.003
                                 ! CDRAG is the drag coefficient relating the magnitude of the velocity field to
                                 ! the surface stress.
 
