@@ -15,9 +15,9 @@ sync:
   restart: true
 
 queue: normalsr
-ncpus: 4992
+ncpus: 2990
 jobfs: 10GB
-mem: 24000GB
+mem: 14700GB
 
 walltime: 10:00:00
 jobname: 8km_panAn_is
@@ -46,9 +46,7 @@ input:
 - /g/data/tm70/cy8964/mom6/input/input-8km/150925/ice_thickness_Charrassin_regridded_cropped_add_area_where_iceelev_noGL5m_ADDHMASKFILLTHICK_150925.nc
 - /g/data/x77/cy8964/mom6/input/input-8km/bottom_roughness_extended_into_cavity_74Sedit.nc
 - /g/data/x77/cy8964/mom6/input/input-8km/tideamp_Charrassin_cavity_cropped.nc
-- /g/data/tm70/cy8964/mom6/input/input-8km/mask_table.2687.120x60
-- /g/data/tm70/cy8964/mom6/input/input-8km/mask_table.2279.96x64
-- /g/data/tm70/cy8964/mom6/input/input-8km/mask_table.2232.110x55
+- /g/data/tm70/cy8964/mom6/input/input-8km/mask_table.1490.84x49
 
 collate:
   restart: true

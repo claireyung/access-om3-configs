@@ -36,12 +36,12 @@ PELAYOUT_attributes::
   cpl_pestride = 1
   cpl_rootpe = 0
   esmf_logging = ESMF_LOGKIND_NONE
-  ice_ntasks = 1092
+  ice_ntasks = 364
   ice_nthreads = 1
   ice_pestride = 1
   ice_rootpe = 0
   ninst = 1
-  ocn_ntasks = 3818
+  ocn_ntasks = 2626
   ocn_nthreads = 1
   ocn_pestride = 1
   ocn_rootpe = 364
