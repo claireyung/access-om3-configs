@@ -83,3 +83,5 @@ payu_minimum_version: 1.1.6
 platform:
   nodesize: 104
   nodemem: 512
+
+restart_freq: 1
