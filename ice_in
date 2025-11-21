@@ -69,8 +69,8 @@
   ustar_min = 0.0005
 /
 &domain_nml
-  block_size_x = 24
-  block_size_y = 22
+  block_size_x = 30
+  block_size_y = 24
   distribution_type = "sectrobin"
   distribution_wght = "latitude"
   maskhalo_bound = .true.
