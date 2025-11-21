@@ -48,6 +48,7 @@ input:
 - /g/data/x77/cy8964/mom6/input/input-8km/tideamp_Charrassin_cavity_cropped.nc
 - /g/data/tm70/cy8964/mom6/input/input-8km/mask_table.2687.120x60
 - /g/data/tm70/cy8964/mom6/input/input-8km/mask_table.2279.96x64
+- /g/data/tm70/cy8964/mom6/input/input-8km/mask_table.2232.110x55
 
 collate:
   restart: true
