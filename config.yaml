@@ -11,22 +11,20 @@ shortpath: /scratch/x77
 sync:
   enable: false   # set path below and change to true
   path: 
-  #    /g/data/x77/cy8964/access-om3/archive/ice_shelf_panan-PR-061025-nofrazilshelf-tideson-newICs           # Set to location on /g/data (e.g. /g/data/PROJECT/USER/EXPERIMENT)
+  #    /g/data/x77/cy8964/access-om3/archive/ice_shelf_panan-spin-up-211125           # Set to location on /g/data (e.g. /g/data/PROJECT/USER/EXPERIMENT)
   restart: true
 
 queue: normalsr
-ncpus: 2990
+ncpus: 5969
 jobfs: 10GB
-mem: 14700GB
+mem: 28697GB
 
-walltime: 5:00:00
-jobname: 8km_panAn_is_ICadj
+walltime: 10:00:00
+jobname: 8km_panAn_is
 
 model: access-om3
 
 exe: access-om3-MOM6-CICE6
-#exe: /g/data/tm70/cy8964/spack/0.22/release/linux-rocky8-x86_64_v4/oneapi-2025.2.0/access3-2025.08.000-w4fxitax5qhwxig7stb6zlxc4ij3nkex/bin/access-om3-MOM6-CICE6
-#exe: /g/data/tm70/cy8964/access-om3-MOM6-CICE6-b2e31ba
 
 input:
 - /g/data/tm70/cy8964/mom6/input/input-8km/150925/kmt_Charrassin_sea_ice_from_iceelev_new150925.nc
@@ -48,7 +46,7 @@ input:
 - /g/data/tm70/cy8964/mom6/input/input-8km/150925/ice_thickness_Charrassin_regridded_cropped_add_area_where_iceelev_noGL5m_ADDHMASKFILLTHICK_150925.nc
 - /g/data/x77/cy8964/mom6/input/input-8km/bottom_roughness_extended_into_cavity_74Sedit.nc
 - /g/data/x77/cy8964/mom6/input/input-8km/tideamp_Charrassin_cavity_cropped.nc
-- /g/data/tm70/cy8964/mom6/input/input-8km/mask_table.1490.84x49
+- /g/data/tm70/cy8964/mom6/input/input-8km/mask_table.2687.120x60
 
 collate:
   restart: true
@@ -78,12 +76,10 @@ modules:
   load:
   - model-tools/mppnccombine-fast/2025.07.000
   - nco/5.0.5
-  - access-om3/pr142-24
+  - access-om3/pr142-26
 
 payu_minimum_version: 1.1.6
 
 platform:
   nodesize: 104
   nodemem: 512
-restart: 
-  /scratch/x77/cy8964/access-om3/archive/ice_shelf_panan-PR-061025-nofrazilshelf-tideson-newICs/restart045
