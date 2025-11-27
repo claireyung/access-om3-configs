@@ -4454,8 +4454,8 @@ work/INPUT/ocean_vgrid_cropped.nc:
 work/INPUT/ryf_gregorian_1980-1984_forcing_access_yr2_8km_fill.nc:
   fullpath: /g/data/x77/cy8964/mom6/input/input-8km/ryf_gregorian_1980-1984_forcing_access_yr2_8km_fill.nc
   hashes:
-    binhash: 45d3a90b466a17734b6288fdc2a63f25
-    md5: 1c4ecd4dd3fcbf92e03a09c26170d017
+    binhash: 5714346a761906900df59ec87a2bc966
+    md5: 10e4c49c17e18ad8e51f212c79753276
 work/INPUT/salt_restore_interpolated_nearest.nc:
   fullpath: /g/data/tm70/cy8964/mom6/input/input-8km/salt_restore_interpolated_nearest.nc
   hashes:
