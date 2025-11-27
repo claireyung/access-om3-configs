@@ -8,8 +8,8 @@ information.
 
 ## Features
 
-- data atmosphere (DATM) = JRA55-do v1-4, RYF 1990-1991
-- data runoff (DROF) = JRA55-do v1-4, RYF 1990-1991
+- data atmosphere (DATM) = JRA55-do v1-6, IAF from 1980
+- data runoff (DROF) = JRA55-do v1-6, IAF from 1980
 - pan-Antarctic domain with open boundary conditions at 37.5 degrees S
 ## Requirements
 
