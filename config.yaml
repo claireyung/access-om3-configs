@@ -11,7 +11,7 @@ shortpath: /scratch/x77
 sync:
   enable: false   # set path below and change to true
   path: 
-  #    /g/data/x77/cy8964/access-om3/archive/ice_shelf_panan-spin-up-211125           # Set to location on /g/data (e.g. /g/data/PROJECT/USER/EXPERIMENT)
+  #    /g/data/x77/cy8964/access-om3/archive/ice_shelf_panan-iaf          # Set to location on /g/data (e.g. /g/data/PROJECT/USER/EXPERIMENT)
   restart: true
 
 queue: normalsr
