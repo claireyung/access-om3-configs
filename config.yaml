@@ -9,14 +9,19 @@ shortpath: /scratch/x77
 # Using payu sync is recommend to copy data from ephemeral scratch space to 
 # longer term storage
 sync:
-  enable: true   # set path below and change to true
-  path: /g/data/x77/cy8964/access-om3/archive/ice_shelf_panan-iaf          # Set to location on /g/data (e.g. /g/data/PROJECT/USER/EXPERIMENT)
+  enable: false #true   # set path below and change to true
+  path: #/g/data/x77/cy8964/access-om3/archive/ice_shelf_panan-iaf          # Set to location on /g/data (e.g. /g/data/PROJECT/USER/EXPERIMENT)
   restart: true
 
+  #queue: normalsr
+  #ncpus: 2990
+  #jobfs: 10GB
+  #mem: 14700GB
+
 queue: normalsr
-ncpus: 2990
+ncpus: 4992
 jobfs: 10GB
-mem: 14700GB
+mem: 24000GB
 
 walltime: 4:00:00
 jobname: iaf8km_panAn_is
@@ -46,6 +51,7 @@ input:
 - /g/data/x77/cy8964/mom6/input/input-8km/bottom_roughness_extended_into_cavity_74Sedit.nc
 - /g/data/x77/cy8964/mom6/input/input-8km/tideamp_Charrassin_cavity_cropped.nc
 - /g/data/tm70/cy8964/mom6/input/input-8km/mask_table.1490.84x49
+- /g/data/tm70/cy8964/mom6/input/input-8km/mask_table.2232.110x55
 
 collate:
   restart: true
@@ -75,7 +81,7 @@ modules:
   load:
   - model-tools/mppnccombine-fast/2025.07.000
   - nco/5.0.5
-  - access-om3/pr142-26
+  - access-om3/pr168-4
 
 payu_minimum_version: 1.1.6
 
@@ -84,3 +90,4 @@ platform:
   nodemem: 512
 
 restart_freq: 1
+restart: /scratch/x77/cy8964/access-om3/archive/ice_shelf_panan-iaf/restart053

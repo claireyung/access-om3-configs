@@ -4086,6 +4086,11 @@ work/INPUT/mask_table.1490.84x49:
   hashes:
     binhash: f880529c8f25b89a50bcff8d51574ab0
     md5: 2d21eca0c746628fc47f1c32ea500e11
+work/INPUT/mask_table.2232.110x55:
+  fullpath: /g/data/tm70/cy8964/mom6/input/input-8km/mask_table.2232.110x55
+  hashes:
+    binhash: 4b02ebcc601239170fc8410592c39a78
+    md5: b77c8e804856a4d82b1eebfdb5d90481
 work/INPUT/ocean/day/tos/gn/v20240531/tos_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-6-0_gn_19580101-19581231.nc:
   fullpath: /g/data/qv56/replicas/input4MIPs/CMIP6Plus/OMIP/MRI/MRI-JRA55-do-1-6-0/ocean/day/tos/gn/v20240531/tos_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-6-0_gn_19580101-19581231.nc
   hashes:
