@@ -224,6 +224,7 @@ diag_table:
             salt_flux: # Net salt flux into ocean at surface (restoring + sea-ice)
             precip: # Liquid+frozen precip into ocean
             frazil_heat_tendency_2d: # Frazil heat tendency integrated vertically
+            evap : # Evaporation
 
     'monthly 2d max fields':
         defaults:  # these can be overridden for individual fields below
@@ -269,6 +270,10 @@ diag_table:
             haline_driving: # haline driving
             tfreeze: # tfreeze
             ustar_shelf: #friction velocity
+            exch_vel_s: # salinity exchange velocity
+            exch_vel_t: # temperature exchange velocity
+            area_shelf_h: # ice shelf area
+            h_shelf: # ice shelf thickness
 
     'daily scalar timeseries':
         defaults:  # these can be overridden for individual fields below
