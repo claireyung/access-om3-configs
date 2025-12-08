@@ -1563,7 +1563,7 @@
     ! units: degC
     ! standard_name: sea_water_potential_temperature_at_sea_floor
     ! cell_methods: xh:mean yh:mean area:mean
-"sob"  [Unused]
+"sob"  [Used]
     ! modules: {ocean_model,ocean_model_d2}
     ! dimensions: xh, yh
     ! long_name: Sea Water Salinity at Sea Floor
@@ -4221,7 +4221,7 @@
     ! standard_name: water_flux_into_sea_water
     ! cell_methods: xh:mean yh:mean area:mean
     ! variants: {PRCmE,wfo}
-"evap"  [Unused] (CMOR equivalent is "evs")
+"evap"  [Used] (CMOR equivalent is "evs")
     ! modules: {ocean_model,ocean_model_d2}
     ! dimensions: xh, yh
     ! long_name: Evaporation/condensation at ocean surface (evaporation is negative)
@@ -4259,7 +4259,7 @@
     ! standard_name: rainfall_flux
     ! cell_methods: xh:mean yh:mean area:mean
     ! variants: {lprec,prlq}
-"vprec"  [Unused]
+"vprec"  [Used]
     ! modules: {ocean_model,ocean_model_d2}
     ! dimensions: xh, yh
     ! long_name: Virtual liquid precip into ocean due to SSS restoring
