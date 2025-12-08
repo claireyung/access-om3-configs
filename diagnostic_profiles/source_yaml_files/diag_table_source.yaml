@@ -223,8 +223,11 @@ diag_table:
             fsitherm: #  water flux to ocean from snow/sea ice melting(> 0) or formation(< 0)
             salt_flux: # Net salt flux into ocean at surface (restoring + sea-ice)
             precip: # Liquid+frozen precip into ocean
+            vprec: # Virtual precip from SSS restoring
             frazil_heat_tendency_2d: # Frazil heat tendency integrated vertically
             evap : # Evaporation
+            tob: # Sea Water Potential Temperature at Sea Floor
+            sob: # Sea Water salinity at Sea Floor
 
     'monthly 2d max fields':
         defaults:  # these can be overridden for individual fields below
