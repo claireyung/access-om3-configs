@@ -288,6 +288,7 @@ diag_table:
             exch_vel_t: # temperature exchange velocity
             area_shelf_h: # ice shelf area
             h_shelf: # ice shelf thickness
+            tflux_shelf: # heat flux conduction ice shelf
 
     'daily scalar timeseries':
         defaults:  # these can be overridden for individual fields below
