@@ -182,6 +182,10 @@ diag_table:
             KE: # Layer Kinetic energy per unit mass
             e: # Interface height relative to mean sea level
             Kd_interface: #Total diapycnal diffusivity at interfaces
+            T_adx: # Heat transport advective, zonal
+            T_ady: # Heat transport advective, meridional
+            S_adx: # Salinity transport advective, zonal
+            S_ady: # Salinity transport advective, meridional
 
     'monthly 3d fields on rho2':
         defaults:  # these can be overridden for individual fields below
@@ -228,6 +232,13 @@ diag_table:
             evap : # Evaporation
             tob: # Sea Water Potential Temperature at Sea Floor
             sob: # Sea Water salinity at Sea Floor
+            sensible: # Sensible heat
+            latent: # Latent heat
+            SW: # shortwave
+            LW: # longwave
+            seaice_melt_heat: # sea ice melt heat flux
+            heat_added: # Restoring
+            Heat_PmE: # Heat flux from mass flux
 
     'monthly 2d max fields':
         defaults:  # these can be overridden for individual fields below

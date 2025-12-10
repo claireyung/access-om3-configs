@@ -83,6 +83,22 @@ ACCESS-OM3
 "ocean_model_z", "Kd_interface", "Kd_interface", "access-om3.mom6.3d.Kd_interface.z.1mon.mean.%4yr", "all", "average", "none", 2
 "ocean_model_z", "h", "h", "access-om3.mom6.3d.Kd_interface.z.1mon.mean.%4yr", "all", "average", "none", 2
 
+"access-om3.mom6.3d.T_adx.z.1mon.mean.%4yr", 1, "months", 1, "days", "time", 1, "years"
+"ocean_model_z", "T_adx", "T_adx", "access-om3.mom6.3d.T_adx.z.1mon.mean.%4yr", "all", "average", "none", 2
+"ocean_model_z", "h", "h", "access-om3.mom6.3d.T_adx.z.1mon.mean.%4yr", "all", "average", "none", 2
+
+"access-om3.mom6.3d.T_ady.z.1mon.mean.%4yr", 1, "months", 1, "days", "time", 1, "years"
+"ocean_model_z", "T_ady", "T_ady", "access-om3.mom6.3d.T_ady.z.1mon.mean.%4yr", "all", "average", "none", 2
+"ocean_model_z", "h", "h", "access-om3.mom6.3d.T_ady.z.1mon.mean.%4yr", "all", "average", "none", 2
+
+"access-om3.mom6.3d.S_adx.z.1mon.mean.%4yr", 1, "months", 1, "days", "time", 1, "years"
+"ocean_model_z", "S_adx", "S_adx", "access-om3.mom6.3d.S_adx.z.1mon.mean.%4yr", "all", "average", "none", 2
+"ocean_model_z", "h", "h", "access-om3.mom6.3d.S_adx.z.1mon.mean.%4yr", "all", "average", "none", 2
+
+"access-om3.mom6.3d.S_ady.z.1mon.mean.%4yr", 1, "months", 1, "days", "time", 1, "years"
+"ocean_model_z", "S_ady", "S_ady", "access-om3.mom6.3d.S_ady.z.1mon.mean.%4yr", "all", "average", "none", 2
+"ocean_model_z", "h", "h", "access-om3.mom6.3d.S_ady.z.1mon.mean.%4yr", "all", "average", "none", 2
+
 
 # monthly 3d fields on rho2
 
@@ -181,6 +197,27 @@ ACCESS-OM3
 
 "access-om3.mom6.2d.sob.1mon.mean.%4yr", 1, "months", 1, "days", "time", 1, "years"
 "ocean_model", "sob", "sob", "access-om3.mom6.2d.sob.1mon.mean.%4yr", "all", "average", "none", 2
+
+"access-om3.mom6.2d.sensible.1mon.mean.%4yr", 1, "months", 1, "days", "time", 1, "years"
+"ocean_model", "sensible", "sensible", "access-om3.mom6.2d.sensible.1mon.mean.%4yr", "all", "average", "none", 2
+
+"access-om3.mom6.2d.latent.1mon.mean.%4yr", 1, "months", 1, "days", "time", 1, "years"
+"ocean_model", "latent", "latent", "access-om3.mom6.2d.latent.1mon.mean.%4yr", "all", "average", "none", 2
+
+"access-om3.mom6.2d.SW.1mon.mean.%4yr", 1, "months", 1, "days", "time", 1, "years"
+"ocean_model", "SW", "SW", "access-om3.mom6.2d.SW.1mon.mean.%4yr", "all", "average", "none", 2
+
+"access-om3.mom6.2d.LW.1mon.mean.%4yr", 1, "months", 1, "days", "time", 1, "years"
+"ocean_model", "LW", "LW", "access-om3.mom6.2d.LW.1mon.mean.%4yr", "all", "average", "none", 2
+
+"access-om3.mom6.2d.seaice_melt_heat.1mon.mean.%4yr", 1, "months", 1, "days", "time", 1, "years"
+"ocean_model", "seaice_melt_heat", "seaice_melt_heat", "access-om3.mom6.2d.seaice_melt_heat.1mon.mean.%4yr", "all", "average", "none", 2
+
+"access-om3.mom6.2d.heat_added.1mon.mean.%4yr", 1, "months", 1, "days", "time", 1, "years"
+"ocean_model", "heat_added", "heat_added", "access-om3.mom6.2d.heat_added.1mon.mean.%4yr", "all", "average", "none", 2
+
+"access-om3.mom6.2d.Heat_PmE.1mon.mean.%4yr", 1, "months", 1, "days", "time", 1, "years"
+"ocean_model", "Heat_PmE", "Heat_PmE", "access-om3.mom6.2d.Heat_PmE.1mon.mean.%4yr", "all", "average", "none", 2
 
 
 # monthly 2d max fields
