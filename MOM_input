@@ -4,11 +4,11 @@
 USE_REGRIDDING = True           !   [Boolean] default = False
                                 ! If True, use the ALE algorithm (regridding/remapping). If False, use the
                                 ! layered isopycnal algorithm.
-DT = 400.0                      !   [s]
+DT = 150 !400.0                      !   [s]
                                 ! The (baroclinic) dynamics time step.  The time-step that is actually used will
                                 ! be an integer fraction of the forcing time-step (DT_FORCING in ocean-only mode
                                 ! or the coupling timestep in coupled mode.)
-DT_THERM = 400.0
+DT_THERM = 150 ! 400.0
 THERMO_SPANS_COUPLING = True    !   [Boolean] default = False
                                 ! If true, the MOM will take thermodynamic timesteps that can be longer than the
                                 ! coupling timestep. The actual thermodynamic timestep that is used in this case
@@ -720,13 +720,13 @@ ICE_AREA_VARNAME = "area"       ! default = "area_shelf_h"
                                 ! The name of the area variable in ICE_THICKNESS_FILE.
 ! === module MOM_domains ===
 AUTO_MASKTABLE = False
-!LAYOUT = 84,49
-!IO_LAYOUT = 12,7
-!MASKTABLE = "mask_table.1490.84x49"
+LAYOUT = 84,49
+IO_LAYOUT = 12,7
+MASKTABLE = "mask_table.1490.84x49"
 
-LAYOUT = 110,55
-IO_LAYOUT = 10,5
-MASKTABLE = "mask_table.2232.110x55"
+!LAYOUT = 110,55
+!IO_LAYOUT = 10,5
+!MASKTABLE = "mask_table.2232.110x55"
 
 ! This section contains non default debugging parameters which are set.
 ! ------------------------
@@ -746,7 +746,7 @@ INT_TIDE_DISSIPATION = True
 H2_FILE = "bottom_roughness.nc"
 TIDEAMP_FILE = "tideamp.nc"
 
-!SAVE_INITIAL_CONDS = True
+SAVE_INITIAL_CONDS = True
 
 !----------- Performance Modifications ---
 PARALLEL_RESTARTFILES = True
@@ -759,5 +759,5 @@ HMIX_SFC_PROP = 1.08
 HMIX_UV_SFC_PROP = 1.08
 MINIMUM_FORCING_DEPTH = 1.08
 
-
+ICE_SHELF_USTAR_FROM_VEL_BUGFIX = True
 

@@ -17,14 +17,16 @@ Also refer to previous notes on the ACCESS-rOM3 panantarctic with no ice shelves
 - Change coupling timestep at corner of `nuopc.runseq` to also be 150
 - To save ICs, use `SAVE_INITIAL_CONDS = True` in `MOM_input`
 - do `payu setup`, `payu sweep`, `payu run` etc
+- NOTE: layout needs to not be too big because it takes more than 5 hours, and the normalsr queue limit is 5:00:00 if ncpus > 4264. So, I use the small layout for the first month then swap after. This requires changes to `config.yaml` (ncpus + mem), `nuopc.runconfig` (`PE_LAYOUT`), and `MOM_input` (mask table) 
 
 ### Step 2: run for February 
 - Comment out `input.nml` `input_filename = 'n'`
 - Change `DT`, `DT_THERM` and coupling timestep to be 400 (should work - otherwise try something in between eg 300)
-- You can also set `DT_THERM` to be larger, e.g. 800
+- You can also set `DT_THERM` to be larger, e.g. 800, but often this crashes in my experience 10% of the time
 - Turn off IC saving with `SAVE_INITIAL_CONDS = False` in `MOM_input`
 - run - now you can use `payu run -n XX`
 - decrease walltime to 4 hours in config.yaml
+- change the number of cores/layout if desired by changing `config.yaml`, mask table info in `MOM_input`, and `PE_LAYOUT` in `nuopc.runconfig`. If doing this, need to first collate the restart files from the first month, and also set `RESTART_CHECKSUMS_REQUIRED = False` just for this month as layout changes affect reproducibility.
 
 
 # Instructions for starting from a restart

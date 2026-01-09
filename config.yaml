@@ -13,17 +13,17 @@ sync:
   #path: /g/data/x77/cy8964/access-om3/archive/ice_shelf_panan-iaf_cont         # Set to location on /g/data (e.g. /g/data/PROJECT/USER/EXPERIMENT)
   restart: true
 
-  #queue: normalsr
-  #ncpus: 2990
-  #jobfs: 10GB
-  #mem: 14700GB
-
 queue: normalsr
-ncpus: 4992
+ncpus: 2990
 jobfs: 10GB
-mem: 24000GB
+mem: 14700GB
 
-walltime: 3:00:00
+  #queue: normalsr
+  #ncpus: 4992
+  #jobfs: 10GB
+  #mem: 24000GB
+
+walltime: 10:00:00
 jobname: iaf8km_panAn_is
 
 model: access-om3
@@ -51,6 +51,7 @@ input:
         - /g/data/vk83/prerelease/configurations/inputs/access-om3/panan-isf.4km/2026.01.08/bottom_roughness.nc
         - /g/data/vk83/prerelease/configurations/inputs/access-om3/panan-isf.4km/2026.01.08/tideamp.nc
         - /g/data/x77/cy8964/mom6/input/input-8km/mask_table.2232.110x55
+        - /g/data/vk83/prerelease/configurations/inputs/access-om3/panan-isf.4km/2026.01.08/mask_table.1490.84x49
 
 collate:
   restart: true
@@ -80,7 +81,7 @@ modules:
   load:
   - model-tools/mppnccombine-fast/2025.07.000
   - nco/5.0.5
-  - access-om3/pr142-31
+  - access-om3/pr142-36
 
 payu_minimum_version: 1.1.6
 
