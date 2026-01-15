@@ -89,4 +89,4 @@ platform:
   nodesize: 104
   nodemem: 512
 
-restart_freq: 12
+restart_freq: 1
