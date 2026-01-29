@@ -2,8 +2,8 @@
 <file id="stream" version="2.0">
   <metadata>
     <File_type>DROF xml file provides river runoff data</File_type>
-    <date_generated>2025-11-27 18:00:41</date_generated>
-    <history>Created by cy8964 (Claire Yung) on 2025-11-27, using /g/data/vk83/apps/om3-scripts/data_stream_xml_generation/generate_xml_drof.py: /g/data/vk83/apps/om3-scripts/data_stream_xml_generation/generate_xml_drof.py 1980 2024</history>
+    <date_generated>2025-12-22 16:13:55</date_generated>
+    <history>Created by cy8964 (Claire Yung) on 2025-12-22, using /g/data/vk83/apps/om3-scripts/data_stream_xml_generation/generate_xml_drof.py: /g/data/vk83/apps/om3-scripts/data_stream_xml_generation/generate_xml_drof.py 1990 2009</history>
   </metadata>
   <stream_info name="JRA55do.LICALVF">
     <taxmode>extend</taxmode>
@@ -12,23 +12,13 @@
     <offset>0</offset>
     <readmode>single</readmode>
     <mapalgo>bilinear</mapalgo>
-    <year_first>1980</year_first>
-    <year_last>2024</year_last>
-    <year_align>1980</year_align>
+    <year_first>1990</year_first>
+    <year_last>2009</year_last>
+    <year_align>1990</year_align>
     <vectors>null</vectors>
     <meshfile>./INPUT/JRA55do-drof-ESMFmesh.nc</meshfile>
     <lev_dimname>null</lev_dimname>
     <datafiles>
-      <file>./INPUT/landIce/day/licalvf/gr/v20240531/licalvf_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-6-0_gr_19800101-19801231.nc</file>
-      <file>./INPUT/landIce/day/licalvf/gr/v20240531/licalvf_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-6-0_gr_19810101-19811231.nc</file>
-      <file>./INPUT/landIce/day/licalvf/gr/v20240531/licalvf_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-6-0_gr_19820101-19821231.nc</file>
-      <file>./INPUT/landIce/day/licalvf/gr/v20240531/licalvf_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-6-0_gr_19830101-19831231.nc</file>
-      <file>./INPUT/landIce/day/licalvf/gr/v20240531/licalvf_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-6-0_gr_19840101-19841231.nc</file>
-      <file>./INPUT/landIce/day/licalvf/gr/v20240531/licalvf_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-6-0_gr_19850101-19851231.nc</file>
-      <file>./INPUT/landIce/day/licalvf/gr/v20240531/licalvf_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-6-0_gr_19860101-19861231.nc</file>
-      <file>./INPUT/landIce/day/licalvf/gr/v20240531/licalvf_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-6-0_gr_19870101-19871231.nc</file>
-      <file>./INPUT/landIce/day/licalvf/gr/v20240531/licalvf_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-6-0_gr_19880101-19881231.nc</file>
-      <file>./INPUT/landIce/day/licalvf/gr/v20240531/licalvf_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-6-0_gr_19890101-19891231.nc</file>
       <file>./INPUT/landIce/day/licalvf/gr/v20240531/licalvf_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-6-0_gr_19900101-19901231.nc</file>
       <file>./INPUT/landIce/day/licalvf/gr/v20240531/licalvf_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-6-0_gr_19910101-19911231.nc</file>
       <file>./INPUT/landIce/day/licalvf/gr/v20240531/licalvf_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-6-0_gr_19920101-19921231.nc</file>
@@ -49,21 +39,6 @@
       <file>./INPUT/landIce/day/licalvf/gr/v20240531/licalvf_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-6-0_gr_20070101-20071231.nc</file>
       <file>./INPUT/landIce/day/licalvf/gr/v20240531/licalvf_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-6-0_gr_20080101-20081231.nc</file>
       <file>./INPUT/landIce/day/licalvf/gr/v20240531/licalvf_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-6-0_gr_20090101-20091231.nc</file>
-      <file>./INPUT/landIce/day/licalvf/gr/v20240531/licalvf_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-6-0_gr_20100101-20101231.nc</file>
-      <file>./INPUT/landIce/day/licalvf/gr/v20240531/licalvf_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-6-0_gr_20110101-20111231.nc</file>
-      <file>./INPUT/landIce/day/licalvf/gr/v20240531/licalvf_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-6-0_gr_20120101-20121231.nc</file>
-      <file>./INPUT/landIce/day/licalvf/gr/v20240531/licalvf_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-6-0_gr_20130101-20131231.nc</file>
-      <file>./INPUT/landIce/day/licalvf/gr/v20240531/licalvf_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-6-0_gr_20140101-20141231.nc</file>
-      <file>./INPUT/landIce/day/licalvf/gr/v20240531/licalvf_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-6-0_gr_20150101-20151231.nc</file>
-      <file>./INPUT/landIce/day/licalvf/gr/v20240531/licalvf_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-6-0_gr_20160101-20161231.nc</file>
-      <file>./INPUT/landIce/day/licalvf/gr/v20240531/licalvf_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-6-0_gr_20170101-20171231.nc</file>
-      <file>./INPUT/landIce/day/licalvf/gr/v20240531/licalvf_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-6-0_gr_20180101-20181231.nc</file>
-      <file>./INPUT/landIce/day/licalvf/gr/v20240531/licalvf_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-6-0_gr_20190101-20191231.nc</file>
-      <file>./INPUT/landIce/day/licalvf/gr/v20240531/licalvf_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-6-0_gr_20200101-20201231.nc</file>
-      <file>./INPUT/landIce/day/licalvf/gr/v20240531/licalvf_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-6-0_gr_20210101-20211231.nc</file>
-      <file>./INPUT/landIce/day/licalvf/gr/v20240531/licalvf_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-6-0_gr_20220101-20221231.nc</file>
-      <file>./INPUT/landIce/day/licalvf/gr/v20240531/licalvf_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-6-0_gr_20230101-20231231.nc</file>
-      <file>./INPUT/landIce/day/licalvf/gr/v20240531/licalvf_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-6-0_gr_20240101-20240201.nc</file>
     </datafiles>
     <datavars>
       <var>licalvf Forr_rofi</var>

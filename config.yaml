@@ -9,8 +9,8 @@ shortpath: /scratch/oz91
 # Using payu sync is recommend to copy data from ephemeral scratch space to 
 # longer term storage
 sync:
-  enable: true   # set path below and change to true
-  path: /g/data/ik11/outputs/access-rom3-panan/MC_4km_jra_iaf+regionalpanan+isf         # Set to location on /g/data (e.g. /g/data/PROJECT/USER/EXPERIMENT)
+  enable: false   # set path below and change to true
+  #path:        # Set to location on /g/data (e.g. /g/data/PROJECT/USER/EXPERIMENT)
   restart: true
 
 queue: normalsr
@@ -24,7 +24,7 @@ mem: 14700GB
   #mem: 24000GB
 
 walltime: 5:00:00
-jobname: iaf8km_panAn_is
+jobname: sspiaf8km_panAn_is
 
 model: access-om3
 
@@ -44,7 +44,7 @@ input:
         - /g/data/vk83/prerelease/configurations/inputs/access-om3/panan-isf.4km/2026.01.08/access-om3-4km-rof-remap-weights.nc
         - /g/data/vk83/configurations/inputs/access-om3/share/meshes/share/2024.09.16/JRA55do-datm-ESMFmesh.nc
         - /g/data/vk83/configurations/inputs/access-om3/share/meshes/share/2024.09.16/JRA55do-drof-ESMFmesh.nc
-        - /g/data/qv56/replicas/input4MIPs/CMIP6Plus/OMIP/MRI/MRI-JRA55-do-1-6-0/
+        - /scratch/oz91/cy8964/replicas/input4MIPs/CMIP6Plus/OMIP/MRI/MRI-JRA55-do-1-6-0/
         - /g/data/x77/cy8964/mom6/input/input-8km/ryf_gregorian_1990-1994_forcing_access_yr2_8km_fill.nc
         - /g/data/vk83/prerelease/configurations/inputs/access-om3/panan.4km/2026.01.08/diag_rho2.nc
         - /g/data/vk83/prerelease/configurations/inputs/access-om3/panan-isf.4km/2026.01.08/ice_shelf_thick.nc
