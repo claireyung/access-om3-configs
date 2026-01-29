@@ -90,3 +90,4 @@ platform:
   nodemem: 512
 
 restart_freq: 1
+
