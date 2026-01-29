@@ -447,7 +447,7 @@ RESTARTFILE = "MOM.res"         ! default = "MOM.res"
                                 ! The name-root of the restart file.
 MAX_FIELDS = 100                ! default = 100
                                 ! The maximum number of restart fields that can be used.
-RESTART_CHECKSUMS_REQUIRED = True !   [Boolean] default = True
+RESTART_CHECKSUMS_REQUIRED = False !   [Boolean] default = True
                                 ! If true, require the restart checksums to match and error out otherwise. Users
                                 ! may want to avoid this comparison if for example the restarts are made from a
                                 ! run with a different mask_table than the current run, in which case the
@@ -680,7 +680,7 @@ ODA_INCUPD = False              !   [Boolean] default = False
 SPONGE = False                  !   [Boolean] default = False
                                 ! If true, sponges may be applied anywhere in the domain. The exact location and
                                 ! properties of those sponges are specified via SPONGE_CONFIG.
-OBC_SEGMENT_001_DATA = "U=file:ryf_gregorian_1985-1989_forcing_access_yr2_8km_fill.nc(u),V=file:ryf_gregorian_1985-1989_forcing_access_yr2_8km_fill.nc(v),SSH=file:ryf_gregorian_1985-1989_forcing_access_yr2_8km_fill.nc(eta_t),TEMP=file:ryf_gregorian_1985-1989_forcing_access_yr2_8km_fill.nc(pot_temp),SALT=file:ryf_gregorian_1985-1989_forcing_access_yr2_8km_fill.nc(salt)" !
+OBC_SEGMENT_001_DATA = "U=file:ryf_gregorian_1990-1994_forcing_access_yr2_8km_fill.nc(u),V=file:ryf_gregorian_1990-1994_forcing_access_yr2_8km_fill.nc(v),SSH=file:ryf_gregorian_1990-1994_forcing_access_yr2_8km_fill.nc(eta_t),TEMP=file:ryf_gregorian_1990-1994_forcing_access_yr2_8km_fill.nc(pot_temp),SALT=file:ryf_gregorian_1990-1994_forcing_access_yr2_8km_fill.nc(salt)" !
                                 ! OBC segment docs
 OBC_USER_CONFIG = "none"        ! default = "none"
                                 ! A string that sets how the user code is invoked to set open boundary data:

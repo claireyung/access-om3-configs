@@ -146,6 +146,11 @@ PARALLEL_RESTARTFILES = True    !   [Boolean] default = False
                                 ! If true, the IO layout is used to group processors that write to the same
                                 ! restart file or each processor writes its own (numbered) restart file. If
                                 ! false, a single restart file is generated combining output from all PEs.
+RESTART_CHECKSUMS_REQUIRED = False !   [Boolean] default = True
+                                ! If true, require the restart checksums to match and error out otherwise. Users
+                                ! may want to avoid this comparison if for example the restarts are made from a
+                                ! run with a different mask_table than the current run, in which case the
+                                ! checksums will not match and cause crash.
 
 ! === module MOM_tracer_flow_control ===
 USE_IDEAL_AGE_TRACER = True     !   [Boolean] default = False
@@ -207,7 +212,7 @@ REMAPPING_USE_OM4_SUBCELLS = False !   [Boolean] default = True
                                 ! recommend setting this option to false.
 
 ! === module MOM_state_initialization ===
-OBC_SEGMENT_001_DATA = "U=file:ryf_gregorian_1985-1989_forcing_access_yr2_8km_fill.nc(u),V=file:ryf_gregorian_1985-1989_forcing_access_yr2_8km_fill.nc(v),SSH=file:ryf_gregorian_1985-1989_forcing_access_yr2_8km_fill.nc(eta_t),TEMP=file:ryf_gregorian_1985-1989_forcing_access_yr2_8km_fill.nc(pot_temp),SALT=file:ryf_gregorian_1985-1989_forcing_access_yr2_8km_fill.nc(salt)" !
+OBC_SEGMENT_001_DATA = "U=file:ryf_gregorian_1990-1994_forcing_access_yr2_8km_fill.nc(u),V=file:ryf_gregorian_1990-1994_forcing_access_yr2_8km_fill.nc(v),SSH=file:ryf_gregorian_1990-1994_forcing_access_yr2_8km_fill.nc(eta_t),TEMP=file:ryf_gregorian_1990-1994_forcing_access_yr2_8km_fill.nc(pot_temp),SALT=file:ryf_gregorian_1990-1994_forcing_access_yr2_8km_fill.nc(salt)" !
                                 ! OBC segment docs
 
 ! === module MOM_diag_mediator ===
