@@ -1017,15 +1017,15 @@ work/INPUT/access-om3-4km-rof-remap-weights.nc:
     binhash: 1ff1c33c3522e7ceca035bf12f27c9e0
     md5: 0b36652f78cf6aa9a4e500c39d313592
 work/INPUT/atmos_mosaic_tile1Xland_mosaic_tile1.nc:
-  fullpath: /g/data/x77/cy8964/mom6/input/input-8km/111225_grid_FRE/atmos_mosaic_tile1Xland_mosaic_tile1.nc
+  fullpath: /g/data/x77/cy8964/mom6/input/input-8km/grid_spec/atmos_mosaic_tile1Xland_mosaic_tile1.nc
   hashes:
-    binhash: 728f126d704d7ac7446e21a2985f6811
-    md5: b420793361a35f6b092358d53bf001ab
+    binhash: 7b2fc954f0fa14e09b3b45e95504c37f
+    md5: cf28de6110c002aa1ed3edb30fafaa0a
 work/INPUT/atmos_mosaic_tile1Xocean_mosaic_tile1.nc:
-  fullpath: /g/data/x77/cy8964/mom6/input/input-8km/111225_grid_FRE/atmos_mosaic_tile1Xocean_mosaic_tile1.nc
+  fullpath: /g/data/x77/cy8964/mom6/input/input-8km/grid_spec/atmos_mosaic_tile1Xocean_mosaic_tile1.nc
   hashes:
-    binhash: 90a98dbb343e8c0492604f3d33cb269b
-    md5: ed9c16f1523399d72cdc1f3c12e5c408
+    binhash: fa57ffdde8d7051aaecdeba235f49334
+    md5: e40d5bee715998251feb2a66e356d823
 work/INPUT/bottom_roughness.nc:
   fullpath: /g/data/vk83/prerelease/configurations/inputs/access-om3/panan-isf.4km/2026.01.08/bottom_roughness.nc
   hashes:
@@ -1037,10 +1037,10 @@ work/INPUT/diag_rho2.nc:
     binhash: fab458dc2a1c9fbb9ef0b6420aebaa78
     md5: b8abcb148bb3ef71282d6be4531e491e
 work/INPUT/grid_spec.nc:
-  fullpath: /g/data/x77/cy8964/mom6/input/input-8km/111225_grid_FRE/grid_spec.nc
+  fullpath: /g/data/x77/cy8964/mom6/input/input-8km/grid_spec/grid_spec.nc
   hashes:
-    binhash: dc09ec00451970e49c4d97651bf1fa47
-    md5: a085ad5ae9a596a8d723f3a631b71331
+    binhash: a3cd5d25d262c420ac9041df4622a975
+    md5: ba8066c1f70d702a66bdb948d630c206
 work/INPUT/ice_shelf_thick.nc:
   fullpath: /g/data/vk83/prerelease/configurations/inputs/access-om3/panan-isf.4km/2026.01.08/ice_shelf_thick.nc
   hashes:
@@ -1162,15 +1162,15 @@ work/INPUT/kmt.nc:
     binhash: 2ba4a79170e04ad88ae76dafca9e915b
     md5: 7442407571b1aeb82827663e377ae45e
 work/INPUT/land_mask.nc:
-  fullpath: /g/data/x77/cy8964/mom6/input/input-8km/111225_grid_FRE/land_mask.nc
+  fullpath: /g/data/x77/cy8964/mom6/input/input-8km/grid_spec/land_mask.nc
   hashes:
-    binhash: e79474d94948e986c9a121405fc88303
-    md5: df78e406655b9708307420b87ff74b1b
+    binhash: 5b11963c715730544b33c6049bb7f952
+    md5: 2c0327d8931b4601793b79ddf6ea5f51
 work/INPUT/land_mosaic_tile1Xocean_mosaic_tile1.nc:
-  fullpath: /g/data/x77/cy8964/mom6/input/input-8km/111225_grid_FRE/land_mosaic_tile1Xocean_mosaic_tile1.nc
+  fullpath: /g/data/x77/cy8964/mom6/input/input-8km/grid_spec/land_mosaic_tile1Xocean_mosaic_tile1.nc
   hashes:
-    binhash: 1d16acc84b40f8e735e18c6a704caeb9
-    md5: a94b0763f08cdb9a612443b8a9b747bd
+    binhash: ba1e0a0f7d2aaa788641cfbf108ba9f6
+    md5: a892d3285b1ceb6abb568b2d4e3759c3
 work/INPUT/mask_table.1490.84x49:
   fullpath: /g/data/vk83/prerelease/configurations/inputs/access-om3/panan-isf.4km/2026.01.08/mask_table.1490.84x49
   hashes:
@@ -1187,15 +1187,15 @@ work/INPUT/ocean_hgrid.nc:
     binhash: 931f526ede0691b223ca4bb42879eeb3
     md5: a1876832e039ca9bf761b8c16a08449e
 work/INPUT/ocean_mask.nc:
-  fullpath: /g/data/x77/cy8964/mom6/input/input-8km/111225_grid_FRE/ocean_mask.nc
+  fullpath: /g/data/x77/cy8964/mom6/input/input-8km/grid_spec/ocean_mask.nc
   hashes:
-    binhash: ac8032efa007aeb7c5b67580202f429a
-    md5: 9d4551b2ae4230e39c21704ffec99152
+    binhash: 0532a085a9f7e852c676aaef2a2db87a
+    md5: 701cce0abea5bded2f05455f0a402337
 work/INPUT/ocean_mosaic.nc:
-  fullpath: /g/data/x77/cy8964/mom6/input/input-8km/111225_grid_FRE/ocean_mosaic.nc
+  fullpath: /g/data/x77/cy8964/mom6/input/input-8km/grid_spec/ocean_mosaic.nc
   hashes:
-    binhash: d806f96c51dda3779eb20f535351469b
-    md5: eca6dff9ac59b373eb466acf1b5b55b1
+    binhash: 7331e4266907aefa2e01b7bdd256b070
+    md5: 980d8a59811e98ff14adbc872fe7f1f6
 work/INPUT/ocean_temp_salt.res.nc:
   fullpath: /g/data/vk83/prerelease/configurations/inputs/access-om3/panan-isf.4km/2026.01.08/ocean_temp_salt.res.nc
   hashes:
