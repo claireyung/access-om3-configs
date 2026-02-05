@@ -146,6 +146,11 @@ PARALLEL_RESTARTFILES = True    !   [Boolean] default = False
                                 ! If true, the IO layout is used to group processors that write to the same
                                 ! restart file or each processor writes its own (numbered) restart file. If
                                 ! false, a single restart file is generated combining output from all PEs.
+RESTART_CHECKSUMS_REQUIRED = False !   [Boolean] default = True
+                                ! If true, require the restart checksums to match and error out otherwise. Users
+                                ! may want to avoid this comparison if for example the restarts are made from a
+                                ! run with a different mask_table than the current run, in which case the
+                                ! checksums will not match and cause crash.
 
 ! === module MOM_tracer_flow_control ===
 USE_IDEAL_AGE_TRACER = True     !   [Boolean] default = False
@@ -676,6 +681,9 @@ SEA_ICE_RIGID_MASS = 100.0      !   [kg m-2] default = 1000.0
 ! === module MOM_grid_init ===
 
 ! === module MOM_ice_shelf ===
+DATA_OVERRIDE_MELT = True       !   [Boolean] default = False
+                                ! If true, the data override feature is used for melt rate and heat flux from
+                                ! ice shelves.
 SHELF_THERMO = True             !   [Boolean] default = False
                                 ! If true, use a thermodynamically interactive ice shelf.
 ICE_SHELF_TEMPERATURE = -20.0   !   [degC] default = -15.0
