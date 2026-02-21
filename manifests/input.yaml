@@ -1,11 +1,11 @@
 format: yamanifest
 version: 1.0
 ---
-work/INPUT/IAF_prescribed_melt_forcing_daily_resampled_1995.nc:
-  fullpath: /g/data/x77/cy8964/mom6/input/input-8km/IAF_prescribed_melt_forcing_daily_resampled_1995.nc
+work/INPUT/IAF_prescribed_melt_forcing_daily_resampled_1996.nc:
+  fullpath: /g/data/x77/cy8964/mom6/input/input-8km/IAF_prescribed_melt_forcing_daily_resampled_1996.nc
   hashes:
-    binhash: c9ba3b22a2ab3a30fbf02fdfeb5bea73
-    md5: 25b18625c004d6ac33a98aba927143d0
+    binhash: 878d6b96553c2259a2fb881551a0d230
+    md5: a156a16cccc9bb828e1068922c33c1ca
 work/INPUT/JRA55do-datm-ESMFmesh.nc:
   fullpath: /g/data/vk83/configurations/inputs/access-om3/share/meshes/share/2024.09.16/JRA55do-datm-ESMFmesh.nc
   hashes:
