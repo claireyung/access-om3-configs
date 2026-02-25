@@ -23,7 +23,7 @@ mem: 14700GB
   #jobfs: 10GB
   #mem: 24000GB
 
-walltime: 5:00:00
+walltime: 6:00:00
 jobname: prsspiaf8km_panAn_is
 
 model: access-om3
