@@ -9,8 +9,8 @@ shortpath: /scratch/oz91
 # Using payu sync is recommend to copy data from ephemeral scratch space to 
 # longer term storage
 sync:
-  enable: false   # set path below and change to true
-  #path:        # Set to location on /g/data (e.g. /g/data/PROJECT/USER/EXPERIMENT)
+  enable: true   # set path below and change to true
+  path: /g/data/x77/cy8964/access-om3/archive/ice_shelf_panan-iaf_v2026_2_ssp585prescmr       # Set to location on /g/data (e.g. /g/data/PROJECT/USER/EXPERIMENT)
   restart: true
 
 queue: normalsr
@@ -52,7 +52,7 @@ input:
         - /g/data/vk83/prerelease/configurations/inputs/access-om3/panan-isf.4km/2026.01.08/tideamp.nc
         - /g/data/x77/cy8964/mom6/input/input-8km/mask_table.2232.110x55
         - /g/data/vk83/prerelease/configurations/inputs/access-om3/panan-isf.4km/2026.01.08/mask_table.1490.84x49
-        - /g/data/x77/cy8964/mom6/input/input-8km/IAF_prescribed_melt_forcing_daily_resampled_1998.nc
+        - /g/data/x77/cy8964/mom6/input/input-8km/IAF_prescribed_melt_forcing_daily_resampled_1999.nc
         - /g/data/x77/cy8964/mom6/input/input-8km/grid_spec/
 
 collate:
