@@ -249,7 +249,7 @@ FRAC_DP_AT_POS_NEGATIVE_P_BUGFIX = True !   [Boolean] default = False
                                 ! input to density EOS is negative.
 TRIMMING_USES_REMAPPING = True  !   [Boolean] default = False
                                 ! When trimming the column, also remap T and S.
-OBC_SEGMENT_001_DATA = "U=file:ryf_gregorian_1995-1999_forcing_access_yr2_8km_fill.nc(u),V=file:ryf_gregorian_1995-1999_forcing_access_yr2_8km_fill.nc(v),SSH=file:ryf_gregorian_1995-1999_forcing_access_yr2_8km_fill.nc(eta_t),TEMP=file:ryf_gregorian_1995-1999_forcing_access_yr2_8km_fill.nc(pot_temp),SALT=file:ryf_gregorian_1995-1999_forcing_access_yr2_8km_fill.nc(salt)" !
+OBC_SEGMENT_001_DATA = "U=file:ryf_gregorian_2000-2004_forcing_access_yr2_8km_fill.nc(u),V=file:ryf_gregorian_2000-2004_forcing_access_yr2_8km_fill.nc(v),SSH=file:ryf_gregorian_2000-2004_forcing_access_yr2_8km_fill.nc(eta_t),TEMP=file:ryf_gregorian_2000-2004_forcing_access_yr2_8km_fill.nc(pot_temp),SALT=file:ryf_gregorian_2000-2004_forcing_access_yr2_8km_fill.nc(salt)" !
                                 ! OBC segment docs
 
 ! === module MOM_diag_mediator ===
