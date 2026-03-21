@@ -1,11 +1,11 @@
 format: yamanifest
 version: 1.0
 ---
-work/INPUT/IAF_prescribed_melt_forcing_daily_resampled_1999.nc:
-  fullpath: /g/data/x77/cy8964/mom6/input/input-8km/IAF_prescribed_melt_forcing_daily_resampled_1999.nc
+work/INPUT/IAF_prescribed_melt_forcing_daily_resampled_2000.nc:
+  fullpath: /g/data/x77/cy8964/mom6/input/input-8km/IAF_prescribed_melt_forcing_daily_resampled_2000.nc
   hashes:
-    binhash: 9dd72025cfa5c395a73df28e4ffc8385
-    md5: 6b4d221a00c55a924606e0e8bfe7e1d2
+    binhash: b57bcb2a4dd0424a70497b9e8bb6281c
+    md5: 6a5baf6cca57a92fa479c8be27ed9d1f
 work/INPUT/JRA55do-datm-ESMFmesh.nc:
   fullpath: /g/data/vk83/configurations/inputs/access-om3/share/meshes/share/2024.09.16/JRA55do-datm-ESMFmesh.nc
   hashes:
@@ -1206,11 +1206,11 @@ work/INPUT/ocean_vgrid.nc:
   hashes:
     binhash: 55ccd1cf1887ece8c2b5788600f49100
     md5: 66f71f2b24bd00b1c220787505e0106e
-work/INPUT/ryf_gregorian_1995-1999_forcing_access_yr2_8km_fill.nc:
-  fullpath: /g/data/x77/cy8964/mom6/input/input-8km/ryf_gregorian_1995-1999_forcing_access_yr2_8km_fill.nc
+work/INPUT/ryf_gregorian_2000-2004_forcing_access_yr2_8km_fill.nc:
+  fullpath: /g/data/x77/cy8964/mom6/input/input-8km/ryf_gregorian_2000-2004_forcing_access_yr2_8km_fill.nc
   hashes:
-    binhash: 7943a2c053b30e7dfa51ed0e31778052
-    md5: 777534cdb287d9353d8e7bef6b780bff
+    binhash: eae84e6ef547bf336c1e95d771de0b98
+    md5: 2ede7826bb49567cfed4860aaf77c25f
 work/INPUT/salt_restore_mask.nc:
   fullpath: /g/data/vk83/prerelease/configurations/inputs/access-om3/panan-isf.4km/2026.01.08/salt_restore_mask.nc
   hashes:
