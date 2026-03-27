@@ -52,7 +52,7 @@ input:
         - /g/data/vk83/prerelease/configurations/inputs/access-om3/panan-isf.4km/2026.01.08/tideamp.nc
         - /g/data/x77/cy8964/mom6/input/input-8km/mask_table.2232.110x55
         - /g/data/vk83/prerelease/configurations/inputs/access-om3/panan-isf.4km/2026.01.08/mask_table.1490.84x49
-        - /g/data/x77/cy8964/mom6/input/input-8km/IAF_prescribed_melt_forcing_daily_resampled_2002.nc
+        - /g/data/x77/cy8964/mom6/input/input-8km/IAF_prescribed_melt_forcing_daily_resampled_2003.nc
         - /g/data/x77/cy8964/mom6/input/input-8km/grid_spec/
 
 collate:
