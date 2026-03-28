@@ -9,7 +9,7 @@ shortpath: /scratch/oz91
 # Using payu sync is recommend to copy data from ephemeral scratch space to 
 # longer term storage
 sync:
-  enable: true   # set path below and change to true
+  enable: false   # set path below and change to true
   path: /g/data/x77/cy8964/access-om3/archive/ice_shelf_panan-iaf_v2026_2_ssp585       # Set to location on /g/data (e.g. /g/data/PROJECT/USER/EXPERIMENT)
   restart: true
 
