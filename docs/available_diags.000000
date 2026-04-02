@@ -4578,27 +4578,27 @@
     ! units: W m-2
     ! cell_methods: xh:mean yh:mean area:mean
     ! variants: {latent,hflso}
-"latent_evap"  [Unused]
+"latent_evap"  [Used]
     ! modules: {ocean_model,ocean_model_d2}
     ! dimensions: xh, yh
     ! long_name: Latent heat flux into ocean due to evaporation/condensation
     ! units: W m-2
     ! cell_methods: xh:mean yh:mean area:mean
-"latent_fprec_diag"  [Unused] (CMOR equivalent is "hfsnthermds")
+"latent_fprec_diag"  [Used] (CMOR equivalent is "hfsnthermds")
     ! modules: {ocean_model,ocean_model_d2}
     ! dimensions: xh, yh
     ! long_name: Latent heat flux into ocean due to melting of frozen precipitation
     ! units: W m-2
     ! cell_methods: xh:mean yh:mean area:mean
     ! variants: {latent_fprec_diag,hfsnthermds}
-"latent_frunoff"  [Unused] (CMOR equivalent is "hfibthermds")
+"latent_frunoff"  [Used] (CMOR equivalent is "hfibthermds")
     ! modules: {ocean_model,ocean_model_d2}
     ! dimensions: xh, yh
     ! long_name: Latent heat flux into ocean due to melting of icebergs
     ! units: W m-2
     ! cell_methods: xh:mean yh:mean area:mean
     ! variants: {latent_frunoff,hfibthermds}
-"latent_frunoff_glc"  [Unused]
+"latent_frunoff_glc"  [Used]
     ! modules: {ocean_model,ocean_model_d2}
     ! dimensions: xh, yh
     ! long_name: Latent heat flux into ocean due to melting of frozen glacier runoff
