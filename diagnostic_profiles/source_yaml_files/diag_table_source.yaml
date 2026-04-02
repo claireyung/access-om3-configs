@@ -239,6 +239,10 @@ diag_table:
             seaice_melt_heat: # sea ice melt heat flux
             heat_added: # Restoring
             Heat_PmE: # Heat flux from mass flux
+            hfibthermds: # Heat flux from iceberg latent heat
+            hfsnthermds: # Heat flux from snow latent heat
+            latent_evap: 
+            latent_frunoff_glc:
 
     'monthly 2d max fields':
         defaults:  # these can be overridden for individual fields below

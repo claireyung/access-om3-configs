@@ -219,6 +219,18 @@ ACCESS-OM3
 "access-om3.mom6.2d.Heat_PmE.1mon.mean.%4yr", 1, "months", 1, "days", "time", 1, "years"
 "ocean_model", "Heat_PmE", "Heat_PmE", "access-om3.mom6.2d.Heat_PmE.1mon.mean.%4yr", "all", "average", "none", 2
 
+"access-om3.mom6.2d.hfibthermds.1mon.mean.%4yr", 1, "months", 1, "days", "time", 1, "years"
+"ocean_model", "hfibthermds", "hfibthermds", "access-om3.mom6.2d.hfibthermds.1mon.mean.%4yr", "all", "average", "none", 2
+
+"access-om3.mom6.2d.hfsnthermds.1mon.mean.%4yr", 1, "months", 1, "days", "time", 1, "years"
+"ocean_model", "hfsnthermds", "hfsnthermds", "access-om3.mom6.2d.hfsnthermds.1mon.mean.%4yr", "all", "average", "none", 2
+
+"access-om3.mom6.2d.latent_evap.1mon.mean.%4yr", 1, "months", 1, "days", "time", 1, "years"
+"ocean_model", "latent_evap", "latent_evap", "access-om3.mom6.2d.latent_evap.1mon.mean.%4yr", "all", "average", "none", 2
+
+"access-om3.mom6.2d.latent_frunoff_glc.1mon.mean.%4yr", 1, "months", 1, "days", "time", 1, "years"
+"ocean_model", "latent_frunoff_glc", "latent_frunoff_glc", "access-om3.mom6.2d.latent_frunoff_glc.1mon.mean.%4yr", "all", "average", "none", 2
+
 
 # monthly 2d max fields
 
