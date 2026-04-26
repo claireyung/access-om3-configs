@@ -207,7 +207,7 @@ REMAPPING_USE_OM4_SUBCELLS = False !   [Boolean] default = True
                                 ! recommend setting this option to false.
 
 ! === module MOM_state_initialization ===
-OBC_SEGMENT_001_DATA = "U=file:ryf_gregorian_2010-2014_forcing_access_yr2_8km_fill.nc(u),V=file:ryf_gregorian_2010-2014_forcing_access_yr2_8km_fill.nc(v),SSH=file:ryf_gregorian_2010-2014_forcing_access_yr2_8km_fill.nc(eta_t),TEMP=file:ryf_gregorian_2010-2014_forcing_access_yr2_8km_fill.nc(pot_temp),SALT=file:ryf_gregorian_2010-2014_forcing_access_yr2_8km_fill.nc(salt)" !
+OBC_SEGMENT_001_DATA = "U=file:ryf_gregorian_2015-2019_forcing_access_yr2_8km_fill.nc(u),V=file:ryf_gregorian_2015-2019_forcing_access_yr2_8km_fill.nc(v),SSH=file:ryf_gregorian_2015-2019_forcing_access_yr2_8km_fill.nc(eta_t),TEMP=file:ryf_gregorian_2015-2019_forcing_access_yr2_8km_fill.nc(pot_temp),SALT=file:ryf_gregorian_2015-2019_forcing_access_yr2_8km_fill.nc(salt)" !
                                 ! OBC segment docs
 
 ! === module MOM_diag_mediator ===
