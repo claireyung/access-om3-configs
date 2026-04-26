@@ -4456,11 +4456,11 @@ work/INPUT/ocean_vgrid.nc:
   hashes:
     binhash: 55ccd1cf1887ece8c2b5788600f49100
     md5: 66f71f2b24bd00b1c220787505e0106e
-work/INPUT/ryf_gregorian_2010-2014_forcing_access_yr2_8km_fill.nc:
-  fullpath: /g/data/x77/cy8964/mom6/input/input-8km/ryf_gregorian_2010-2014_forcing_access_yr2_8km_fill.nc
+work/INPUT/ryf_gregorian_2015-2019_forcing_access_yr2_8km_fill.nc:
+  fullpath: /g/data/x77/cy8964/mom6/input/input-8km/ryf_gregorian_2015-2019_forcing_access_yr2_8km_fill.nc
   hashes:
-    binhash: 1516618fa91369d11998852a807c286b
-    md5: 38eb3cea4f98992b63041e6a75783097
+    binhash: 05e2164e161a037edc24e5243b3eec7d
+    md5: ca0ece2b9f21d6daf4bb8354af4458c8
 work/INPUT/salt_restore_mask.nc:
   fullpath: /g/data/vk83/prerelease/configurations/inputs/access-om3/panan-isf.4km/2026.01.08/salt_restore_mask.nc
   hashes:
