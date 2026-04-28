@@ -28,6 +28,8 @@ Also refer to previous notes on the ACCESS-rOM3 panantarctic with no ice shelves
 - decrease walltime to 4 hours in config.yaml
 - change the number of cores/layout if desired by changing `config.yaml`, mask table info in `MOM_input`, and `PE_LAYOUT` in `nuopc.runconfig`. If doing this, need to first collate the restart files from the first month, and also set `RESTART_CHECKSUMS_REQUIRED = False` just for this month as layout changes affect reproducibility.
 
+### Step 3: Swap OBC forcing file (IAF only)
+- My ARE kernel died when I made an OBC file for IAF config, which was just RYF open boundary data repeated and interpolated to Feb 29 every few years. So, I split it into 5 year chunks, so you need to swap the OBC file every 5 years to the new time period `/g/data/x77/cy8964/mom6/input/input-8km/ryf_gregorian_2015-2019_forcing_access_yr2_8km_fill.nc` (change the `config.yaml` and all of the mentions in `MOM_input`
 
 # Instructions for starting from a restart
 - Use `payu checkout --restart path/to/restart` (this should already be in the config.yaml)
