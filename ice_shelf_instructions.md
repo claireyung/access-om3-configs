@@ -18,6 +18,7 @@ Also refer to previous notes on the ACCESS-rOM3 panantarctic with no ice shelves
 - To save ICs, use `SAVE_INITIAL_CONDS = True` in `MOM_input`
 - do `payu setup`, `payu sweep`, `payu run` etc
 - NOTE: layout needs to not be too big because it takes more than 5 hours, and the normalsr queue limit is 5:00:00 if ncpus > 4264. So, I use the small layout for the first month then swap after. This requires changes to `config.yaml` (ncpus + mem), `nuopc.runconfig` (`PE_LAYOUT`), and `MOM_input` (mask table) 
+- Check you are using the correct OBC forcing file (IAF only, see step 3)
 
 ### Step 2: run for February 
 - Comment out `input.nml` `input_filename = 'n'`
