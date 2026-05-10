@@ -286,7 +286,7 @@ CLOCK_attributes::
 ::
 
 ATM_attributes::
-     Verbosity = off
+     Verbosity = on
      aqua_planet = .false.
      perpetual = .false.
      perpetual_ymd = -999
