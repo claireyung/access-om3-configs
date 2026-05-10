@@ -83,8 +83,8 @@ modules:
   load:
   - model-tools/mppnccombine-fast/2025.07.000
   - nco/5.0.5
-  - access-om3/pr142-36
-    #- access-om3/pr189-11
+    #- access-om3/pr142-36
+  - access-om3/pr189-11
 
 payu_minimum_version: 1.1.6
 
