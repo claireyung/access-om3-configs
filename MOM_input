@@ -4,11 +4,11 @@
 USE_REGRIDDING = True           !   [Boolean] default = False
                                 ! If True, use the ALE algorithm (regridding/remapping). If False, use the
                                 ! layered isopycnal algorithm.
-DT = 400.0                      !   [s]
+DT = 150.0                      !   [s]
                                 ! The (baroclinic) dynamics time step.  The time-step that is actually used will
                                 ! be an integer fraction of the forcing time-step (DT_FORCING in ocean-only mode
                                 ! or the coupling timestep in coupled mode.)
-DT_THERM = 400.0
+DT_THERM = 150.0
 THERMO_SPANS_COUPLING = True    !   [Boolean] default = False
                                 ! If true, the MOM will take thermodynamic timesteps that can be longer than the
                                 ! coupling timestep. The actual thermodynamic timestep that is used in this case
@@ -249,7 +249,7 @@ FRAC_DP_AT_POS_NEGATIVE_P_BUGFIX = True !   [Boolean] default = False
                                 ! input to density EOS is negative.
 TRIMMING_USES_REMAPPING = True  !   [Boolean] default = False
                                 ! When trimming the column, also remap T and S.
-OBC_SEGMENT_001_DATA = "U=file:ryf_gregorian_2015-2019_forcing_access_yr2_8km_fill.nc(u),V=file:ryf_gregorian_2015-2019_forcing_access_yr2_8km_fill.nc(v),SSH=file:ryf_gregorian_2015-2019_forcing_access_yr2_8km_fill.nc(eta_t),TEMP=file:ryf_gregorian_2015-2019_forcing_access_yr2_8km_fill.nc(pot_temp),SALT=file:ryf_gregorian_2015-2019_forcing_access_yr2_8km_fill.nc(salt)" !
+OBC_SEGMENT_001_DATA = "U=file:ryf_gregorian_1975-1979_forcing_access_yr2_8km_fill.nc(u),V=file:ryf_gregorian_1975-2019_forcing_access_yr2_8km_fill.nc(v),SSH=file:ryf_gregorian_1975-1979_forcing_access_yr2_8km_fill.nc(eta_t),TEMP=file:ryf_gregorian_1975-1979_forcing_access_yr2_8km_fill.nc(pot_temp),SALT=file:ryf_gregorian_1975-1979_forcing_access_yr2_8km_fill.nc(salt)" !
                                 ! OBC segment docs
 
 ! === module MOM_diag_mediator ===
@@ -724,6 +724,7 @@ LAYOUT = 84,49
 IO_LAYOUT = 12,7
 MASKTABLE = "mask_table.1490.84x49"
 
+! Expensive/fast layout
 !LAYOUT = 110,55
 !IO_LAYOUT = 10,5
 !MASKTABLE = "mask_table.2232.110x55"
@@ -746,7 +747,7 @@ INT_TIDE_DISSIPATION = True
 H2_FILE = "bottom_roughness.nc"
 TIDEAMP_FILE = "tideamp.nc"
 
-!SAVE_INITIAL_CONDS = True
+SAVE_INITIAL_CONDS = True
 
 !----------- Performance Modifications ---
 PARALLEL_RESTARTFILES = True
@@ -759,4 +760,8 @@ HMIX_SFC_PROP = 1.08
 HMIX_UV_SFC_PROP = 1.08
 MINIMUM_FORCING_DEPTH = 1.08
 
+!------- Ice shelf bug fixes -------
 ICE_SHELF_USTAR_FROM_VEL_BUGFIX = True
+RESCALE_STRONG_DRAG = True
+BT_STRONG_DRAG = True
+
