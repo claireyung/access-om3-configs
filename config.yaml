@@ -9,9 +9,9 @@ shortpath: /scratch/oz91
 # Using payu sync is recommend to copy data from ephemeral scratch space to 
 # longer term storage
 sync:
-  enable: true   # set path below and change to true
-  path: /g/data/ik11/outputs/access-rom3-panan/MC_4km_jra_iaf+regionalpanan+isf         # Set to location on /g/data (e.g. /g/data/PROJECT/USER/EXPERIMENT)
-  restart: true
+  enable: false   # set path below and change to true
+  path: ##/g/data/ik11/outputs/access-rom3-panan/MC_4km_jra_iaf+regionalpanan+isf         # Set to location on /g/data (e.g. /g/data/PROJECT/USER/EXPERIMENT)
+  restart: false
 
 queue: normalsr
 ncpus: 2990
