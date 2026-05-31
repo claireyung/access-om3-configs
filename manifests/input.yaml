@@ -3381,6 +3381,11 @@ work/INPUT/bottom_roughness.nc:
   hashes:
     binhash: 8a947441b2ee9162af7d4a3030bb4153
     md5: 7f82353f4add21c0694a793d4480e50f
+work/INPUT/chl_globcolour_monthly_clim.nc:
+  fullpath: /g/data/vk83/prerelease/configurations/inputs/access-om3/panan.4km/2026.05.20/chl_globcolour_monthly_clim.nc
+  hashes:
+    binhash: 21a6011c729ca36c88cd49a80956a753
+    md5: ababead969f5d0fb2bef843f47232620
 work/INPUT/day/licalvf/gr/v20240531/licalvf_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-6-0_gr_19580101-19581231.nc:
   fullpath: /g/data/qv56/replicas/input4MIPs/CMIP6Plus/OMIP/MRI/MRI-JRA55-do-1-6-0/landIce/day/licalvf/gr/v20240531/licalvf_input4MIPs_atmosphericState_OMIP_MRI-JRA55-do-1-6-0_gr_19580101-19581231.nc
   hashes:
