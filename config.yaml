@@ -40,7 +40,8 @@ input:
         - /g/data/vk83/prerelease/configurations/inputs/access-om3/panan-isf.4km/2026.01.08/salt_restore_mask.nc
         - /g/data/vk83/prerelease/configurations/inputs/access-om3/panan-isf.4km/2026.01.08/topog_seaice.nc
         - /g/data/vk83/prerelease/configurations/inputs/access-om3/panan-isf.4km/2026.01.08/topog.nc
-        - /g/data/vk83/prerelease/configurations/inputs/access-om3/panan.4km/2026.05.20/chl_globcolour_monthly_clim.nc
+          #- /g/data/vk83/prerelease/configurations/inputs/access-om3/panan.4km/2026.05.20/chl_globcolour_monthly_clim.nc
+        - /g/data/x77/cy8964/mom6/input/input-8km/chl_globcolour_monthly_clim.nc
         - /g/data/vk83/prerelease/configurations/inputs/access-om3/panan-isf.4km/2026.01.08/access-om3-4km-ESMFmesh.nc
         - /g/data/vk83/prerelease/configurations/inputs/access-om3/panan-isf.4km/2026.01.08/access-om3-4km-nomask-ESMFmesh.nc
         - /g/data/vk83/prerelease/configurations/inputs/access-om3/panan-isf.4km/2026.01.08/access-om3-4km-rof-remap-weights.nc
