@@ -472,6 +472,7 @@ MLE%
 USE_BODNER23 = True             !   [Boolean] default = False
                                 ! If true, use the Bodner et al., 2023, formulation of the re-stratifying
                                 ! mixed-layer restratification parameterization. This only works in ALE mode.
+BODNER_HMIN_BUG = False
 CR = 0.0175                     !   [nondim] default = 0.0
                                 ! The efficiency coefficient in eq 27 of Bodner et al., 2023.
 BLD_DECAYING_TFILTER = 8.64E+04 !   [s] default = 0.0
@@ -805,4 +806,3 @@ ICE_SHELF_USTAR_FROM_VEL_BUGFIX = True
 RESCALE_STRONG_DRAG = True
 BT_STRONG_DRAG = True
 
-MLE%BODNER_HMIN_BUG = False
