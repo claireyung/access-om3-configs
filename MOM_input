@@ -718,7 +718,7 @@ DENSITY_ICE = 917.0             !   [kg m-3] default = 900.0
                                 ! A typical density of ice.
 USTAR_SHELF_BG = 0.0006          !   [m s-1] default = 0.0
                                 ! The minimum value of ustar under ice shelves.
-CDRAG_SHELF = 0.007
+CDRAG_SHELF = 0.009
 ICE_PROFILE_CONFIG = "FILE"     !
                                 ! This specifies how the initial ice profile is specified. Valid values are:
                                 ! CHANNEL, FILE, and USER.
@@ -730,14 +730,15 @@ ICE_AREA_VARNAME = "area"       ! default = "area_shelf_h"
                                 ! The name of the area variable in ICE_THICKNESS_FILE.
 ! === module MOM_domains ===
 AUTO_MASKTABLE = False
-LAYOUT = 84,49
-IO_LAYOUT = 12,7
-MASKTABLE = "mask_table.1490.84x49"
+! Slow/cheaper layout
+!LAYOUT = 84,49
+!IO_LAYOUT = 12,7
+!MASKTABLE = "mask_table.1490.84x49"
 
 ! Expensive/fast layout
-!LAYOUT = 110,55
-!IO_LAYOUT = 10,5
-!MASKTABLE = "mask_table.2232.110x55"
+LAYOUT = 110,55
+IO_LAYOUT = 10,5
+MASKTABLE = "mask_table.2232.110x55"
 
 ! This section contains non default debugging parameters which are set.
 ! ------------------------
@@ -804,3 +805,4 @@ ICE_SHELF_USTAR_FROM_VEL_BUGFIX = True
 RESCALE_STRONG_DRAG = True
 BT_STRONG_DRAG = True
 
+BODNER_HMIN_BUG = False
