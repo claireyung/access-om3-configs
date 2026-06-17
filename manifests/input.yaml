@@ -3737,10 +3737,10 @@ work/INPUT/fx/sftof/gr/v20240531/sftof_input4MIPs_atmosphericState_OMIP_MRI-JRA5
     binhash: 7f98fc486410cff8df3232d390e5a05b
     md5: f5034ec4d5228d648be6375b13ed2c98
 work/INPUT/ice_shelf_thick.nc:
-  fullpath: /g/data/x77/cy8964/mom6/input/input-8km/17.06.26/ice_shelf_thick.nc
+  fullpath: /g/data/x77/cy8964/mom6/input/input-8km/17.06.26COPY/ice_shelf_thick.nc
   hashes:
-    binhash: 56494c6786c000e20f6650650a3c746c
-    md5: 5855c2377d2802c6543f71147e08a587
+    binhash: 6a0ed67462bdbf002c1b6961be5f1a4d
+    md5: 2b5c27323b5a2206c28e10dab4d8327b
 work/INPUT/kmt.nc:
   fullpath: /g/data/x77/cy8964/mom6/input/input-8km/17.06.26/kmt.nc
   hashes:
