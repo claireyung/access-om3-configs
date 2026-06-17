@@ -3364,8 +3364,8 @@ work/INPUT/JRA55do-drof-ESMFmesh.nc:
 work/INPUT/access-om3-4km-ESMFmesh.nc:
   fullpath: /g/data/x77/cy8964/mom6/input/input-8km/17.06.26/access-om3-4km-ESMFmesh.nc
   hashes:
-    binhash: 164dc81064f8883aebd051de28f2dfd9
-    md5: b268f9bc63b2dc9990732fb68e7b92af
+    binhash: 884ce23eb1267be0407809e4fdcfb919
+    md5: 9cd56cc9b096da80e676166cc744bbd5
 work/INPUT/access-om3-4km-nomask-ESMFmesh.nc:
   fullpath: /g/data/x77/cy8964/mom6/input/input-8km/17.06.26/access-om3-4km-nomask-ESMFmesh.nc
   hashes:
