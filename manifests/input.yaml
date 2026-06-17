@@ -3742,10 +3742,10 @@ work/INPUT/ice_shelf_thick.nc:
     binhash: 56494c6786c000e20f6650650a3c746c
     md5: 5855c2377d2802c6543f71147e08a587
 work/INPUT/kmt.nc:
-  fullpath: /g/data/vk83/prerelease/configurations/inputs/access-om3/panan-isf.4km/2026.01.08/kmt.nc
+  fullpath: /g/data/x77/cy8964/mom6/input/input-8km/17.06.26/kmt.nc
   hashes:
-    binhash: 8d34a488332e54be5d932a997c44d9ab
-    md5: 551a62a9e522b16126bae843e257313f
+    binhash: 7f567d1160bfd240d60c225241a60e53
+    md5: ef2f39bcf10a28892d05866f0823e98d
 work/INPUT/mask_table.1490.84x49:
   fullpath: /g/data/vk83/prerelease/configurations/inputs/access-om3/panan-isf.4km/2026.01.08/mask_table.1490.84x49
   hashes:
