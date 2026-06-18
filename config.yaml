@@ -25,7 +25,7 @@ ncpus: 4992
 jobfs: 10GB
 mem: 24576GB
 
-walltime: 5:00:00
+walltime: 4:00:00
 jobname: iceshelfpanAn
 
 model: access-om3
