@@ -341,11 +341,19 @@ OBC_RAD_VEL_WT = 0.3            !   [nondim] default = 0.3
                                 ! velocities. Valid values range from 0 to 1. This is only used if one of the
                                 ! open boundary segments is using Orlanski.
 OBC_TRACER_RESERVOIR_LENGTH_SCALE_OUT = 3.0E+04 !   [m] default = 0.0
-                                ! An effective length scale for restoring the tracer concentration at the
-                                ! boundaries to externally imposed values when the flow is exiting the domain.
+                                ! An effective length scale for the tracer reservoir update when the flow is
+                                ! exiting the domain. If positive, the reservoir relaxes toward the interior
+                                ! concentration with this length scale. If zero (default), the length scale is
+                                ! truly zero: the reservoir is set instantly to the interior concentration on
+                                ! outflow. If negative, the length scale is effectively infinite: the reservoir
+                                ! is never updated on outflow.
 OBC_TRACER_RESERVOIR_LENGTH_SCALE_IN = 3000.0 !   [m] default = 0.0
-                                ! An effective length scale for restoring the tracer concentration at the
-                                ! boundaries to values from the interior when the flow is entering the domain.
+                                ! An effective length scale for the tracer reservoir update when the flow is
+                                ! entering the domain. If positive, the reservoir relaxes toward the external
+                                ! OBC concentration with this length scale. If zero (default), the length scale
+                                ! is truly zero: the reservoir is set instantly to the external OBC
+                                ! concentration on inflow. If negative, the length scale is effectively
+                                ! infinite: the reservoir is never updated on inflow.
 OBC_THICKNESS_RESERVOIR_LENGTH_SCALE_OUT = 0.0 !   [m] default = 0.0
                                 ! An effective length scale for restoring the layer thickness at the boundaries
                                 ! to externally imposed values when the flow is exiting the domain.
@@ -409,6 +417,13 @@ GRID_ROTATION_ANGLE_BUGS = False !   [Boolean] default = False
                                 ! If true, use an older algorithm to calculate the sine and cosines needed
                                 ! rotate between grid-oriented directions and true north and east.  Differences
                                 ! arise at the tripolar fold.
+DT_OBC_SEG_UPDATE_OBGC = 150.0  !   [s] default = 150.0
+                                ! The time between OBC segment data updates for OBGC tracers.  This must be an
+                                ! integer multiple of DT and DT_THERM.  The default is set to DT.
+OBC_BGC_TIME_REF_BUG = True     !   [Boolean] default = True
+                                ! If true, recover a bug that the BGC OBC segment update schedule is referenced
+                                ! to the start of the current run rather than the overall start time, which can
+                                ! lead to restart reproducibility failures.
 
 ! === module MOM_verticalGrid ===
 ! Parameters providing information about the vertical grid.
@@ -499,6 +514,8 @@ USE_MARBL_TRACERS = False       !   [Boolean] default = False
                                 ! If true, use the MARBL tracer package.
 USE_REGIONAL_DYES = False       !   [Boolean] default = False
                                 ! If true, use the regional_dyes tracer package.
+USE_FILE_DYES = False           !   [Boolean] default = False
+                                ! If true, use the file dyes tracer package.
 USE_OIL_TRACER = False          !   [Boolean] default = False
                                 ! If true, use the oil_tracer tracer package.
 USE_ADVECTION_TEST_TRACER = False !   [Boolean] default = False
@@ -869,6 +886,9 @@ DIAG_MISVAL = 1.0E+20           !   [various] default = 1.0E+20
 DIAG_AS_CHKSUM = False          !   [Boolean] default = False
                                 ! Instead of writing diagnostics to the diag manager, write a text file
                                 ! containing the checksum (bitcount) of the array.
+NUM_DIAG_DOWNSAMP_LEV = 0       ! default = 0
+                                ! The number of diagnostic downsample levels to use. For each level, an entry in
+                                ! DIAG_DOWNSAMP_LEV must be provided.
 AVAILABLE_DIAGS_FILE = "available_diags.000000" ! default = "available_diags.000000"
                                 ! A file into which to write a list of all available ocean diagnostics that can
                                 ! be included in a diag_table.
@@ -1155,6 +1175,9 @@ CHANNEL_DRAG_MAX_BBL_THICK = 5.0 !   [m] default = 5.0
                                 ! proportional to HBBL if USE_JACKSON_PARAM or DRAG_AS_BODY_FORCE is true.
 
 ! === module MOM_thickness_diffuse ===
+USE_THICKNESS_DIFFUSE_ANN = False !   [Boolean] default = False
+                                ! If true, use the ANN to compute the mesoscale streamfunction for thickness
+                                ! diffusivity.
 KHTH = 0.0                      !   [m2 s-1] default = 0.0
                                 ! The background horizontal thickness diffusivity.
 READ_KHTH = False               !   [Boolean] default = False
@@ -1742,6 +1765,10 @@ ML_RESTRAT_ANSWER_DATE = 99991231 ! default = 99991231
                                 ! restrat calculations.  Values below 20240201 recover the answers from the end
                                 ! of 2023, while higher values use the new cuberoot function in the Bodner code
                                 ! to avoid needing to undo dimensional rescaling.
+BODNER_HMIN_BUG = False         !   [Boolean] default = True
+                                ! If true, recover a bug where layer thicknesses in the Bodner et al. mixed
+                                ! layer restratification are not clamped at a minimum value and can therefore go
+                                ! negative.
 MIN_WSTAR2 = 1.0E-09            !   [m2 s-2] default = 1.0E-24
                                 ! The minimum lower bound to apply to the vertical momentum flux, w'u', in the
                                 ! Bodner et al., restratification parameterization. This avoids a
@@ -2750,7 +2777,7 @@ MIN_THICKNESS_SIMPLE_CALVE = 0.0 !   [m] default = 0.0
                                 ! Min thickness rule for the very simple calving law
 USTAR_SHELF_BG = 6.0E-04        !   [m s-1] default = 0.0
                                 ! The minimum value of ustar under ice shelves.
-CDRAG_SHELF = 0.007             !   [nondim] default = 0.003
+CDRAG_SHELF = 0.009             !   [nondim] default = 0.003
                                 ! CDRAG is the drag coefficient relating the magnitude of the velocity field to
                                 ! the surface stress.
 USTAR_SHELF_FROM_VEL = True     !   [Boolean] default = True
