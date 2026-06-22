@@ -264,8 +264,6 @@ diag_table:
             tos: # Sea Surface Temperature
             sos: # Sea Surface Salinity
             speed: # Sea Surface Speed
-            wfo: # Water flux
-            hfds: #heat flux
     'daily 2D ice shelf fields':
         defaults:
             file_name_dimension: 2d  # descriptor for filename, e.g. 3d, 2d, scalar
