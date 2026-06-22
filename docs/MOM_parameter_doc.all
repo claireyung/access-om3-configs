@@ -499,6 +499,8 @@ USE_MARBL_TRACERS = False       !   [Boolean] default = False
                                 ! If true, use the MARBL tracer package.
 USE_REGIONAL_DYES = False       !   [Boolean] default = False
                                 ! If true, use the regional_dyes tracer package.
+USE_FILE_DYES = False           !   [Boolean] default = False
+                                ! If true, use the file dyes tracer package.
 USE_OIL_TRACER = False          !   [Boolean] default = False
                                 ! If true, use the oil_tracer tracer package.
 USE_ADVECTION_TEST_TRACER = False !   [Boolean] default = False
@@ -1742,6 +1744,10 @@ ML_RESTRAT_ANSWER_DATE = 99991231 ! default = 99991231
                                 ! restrat calculations.  Values below 20240201 recover the answers from the end
                                 ! of 2023, while higher values use the new cuberoot function in the Bodner code
                                 ! to avoid needing to undo dimensional rescaling.
+BODNER_HMIN_BUG = False         !   [Boolean] default = True
+                                ! If true, recover a bug where layer thicknesses in the Bodner et al. mixed
+                                ! layer restratification are not clamped at a minimum value and can therefore go
+                                ! negative.
 MIN_WSTAR2 = 1.0E-09            !   [m2 s-2] default = 1.0E-24
                                 ! The minimum lower bound to apply to the vertical momentum flux, w'u', in the
                                 ! Bodner et al., restratification parameterization. This avoids a
@@ -2750,7 +2756,7 @@ MIN_THICKNESS_SIMPLE_CALVE = 0.0 !   [m] default = 0.0
                                 ! Min thickness rule for the very simple calving law
 USTAR_SHELF_BG = 6.0E-04        !   [m s-1] default = 0.0
                                 ! The minimum value of ustar under ice shelves.
-CDRAG_SHELF = 0.007             !   [nondim] default = 0.003
+CDRAG_SHELF = 0.009             !   [nondim] default = 0.003
                                 ! CDRAG is the drag coefficient relating the magnitude of the velocity field to
                                 ! the surface stress.
 USTAR_SHELF_FROM_VEL = True     !   [Boolean] default = True
