@@ -4,33 +4,38 @@ Please see https://github.com/claireyung/mom6-panAn-iceshelf-tools/wiki for note
 
 Also refer to previous notes on the ACCESS-rOM3 panantarctic with no ice shelves here: https://github.com/claireyung/access-om3-configs/blob/8km_jra_ryf_obc2-sapphirerapid-Charrassin-newparams-rerun-Wright-spinup-accessom2IC-yr9/panantarctic_instructions.md
 
-**Important**: requires small timestep at the start, may need more walltime, but with default number of cores should fit within normalsr 10 hr limit 
+**Important**: requires small timestep at the start, may need more walltime, but with default number of cores should fit within normalsr 10 hr limit  (with 4992 config it has a 5hr limit and will not fit a whole month)
 
 **Also important**: Code changes are required, see https://github.com/ACCESS-NRI/MOM6/issues/29 and branch https://github.com/ACCESS-NRI/MOM6/tree/ice-shelf-dev
 
 **Also important**: If changing files, think carefully about masks and coverage. See Claire's notes/contact her if you have questions. Otherwise you might allow the ocean to talk to the atmos in the ice shelf cavities, or have sea ice grow there... 
 
 # Instructions for starting from rest
-### Step 1: run for 1 month from rest
+### Step 1: run for 10 days from rest
 - In `MOM_input` set `DT = 150`, `DT_THERM = 150`
 - In `input.nml` set `input_filename = 'n'`
 - Change coupling timestep at corner of `nuopc.runseq` to also be 150
+- In `nuopc.runconfig` `CLOCK` section change `stop_n = 10`, `restart_n = 10`,`stop_option = ndays`, `restart_option = ndays`  
 - To save ICs, use `SAVE_INITIAL_CONDS = True` in `MOM_input`
 - do `payu setup`, `payu sweep`, `payu run` etc
-- NOTE: layout needs to not be too big because it takes more than 5 hours, and the normalsr queue limit is 5:00:00 if ncpus > 4264. So, I use the small layout for the first month then swap after. This requires changes to `config.yaml` (ncpus + mem), `nuopc.runconfig` (`PE_LAYOUT`), and `MOM_input` (mask table) 
 - Check you are using the correct OBC forcing file (IAF only, see step 3)
 
-### Step 2: run for February 
+### Step 2: run for second 21 days of Jan 
 - Comment out `input.nml` `input_filename = 'n'`
 - Change `DT`, `DT_THERM` and coupling timestep to be 400 (should work - otherwise try something in between eg 300)
 - You can also set `DT_THERM` to be larger, e.g. 800, but often this crashes in my experience 10% of the time
 - Turn off IC saving with `SAVE_INITIAL_CONDS = False` in `MOM_input`
-- run - now you can use `payu run -n XX`
+- In `nuopc.runconfig` `CLOCK` section change `stop_n = 21`, `restart_n = 21`
 - decrease walltime to 4 hours in config.yaml
-- change the number of cores/layout if desired by changing `config.yaml`, mask table info in `MOM_input`, and `PE_LAYOUT` in `nuopc.runconfig`. If doing this, need to first collate the restart files from the first month, and also set `RESTART_CHECKSUMS_REQUIRED = False` just for this month as layout changes affect reproducibility.
+- run
+
+### Step 3: run for Feb
+- In `nuopc.runconfig` `CLOCK` section change `stop_n = 1`, `restart_n = 1`,`stop_option = nmonths`, `restart_option = nmonths`
+- run - now you can use `payu run -n XX` to run multiple months
+- You may want to delete the bad monthly diagnostics in January that will just be corrupt/NaN files, otherwise I think intake will through issues. May need to also delete the automatically generated intake database?
 
 ### Step 3: Swap OBC forcing file (IAF only)
-- My ARE kernel died when I made an OBC file for IAF config, which was just RYF open boundary data repeated and interpolated to Feb 29 every few years. So, I split it into 5 year chunks, so you need to swap the OBC file every 5 years to the new time period `/g/data/x77/cy8964/mom6/input/input-8km/ryf_gregorian_2015-2019_forcing_access_yr2_8km_fill.nc` (change the `config.yaml` and all of the mentions in `MOM_input`
+- My ARE kernel died when I made an OBC file for IAF config, which was just RYF open boundary data repeated and interpolated to Feb 29 every few years. So, I split it into 5 year chunks, so you need to swap the OBC file every 5 years to the new time period `/g/data/x77/cy8964/mom6/input/input-8km/ryf_gregorian_2015-2019_forcing_access_yr2_8km_fill.nc` (change the `config.yaml` and all of the mentions in `MOM_input`)
 
 # Instructions for starting from a restart
 - Use `payu checkout --restart path/to/restart` (this should already be in the config.yaml)
@@ -44,3 +49,4 @@ payu checkout dev-MC_4km_jra_ryf+regionalpanan+isf+draft --restart /g/data/ol01/
 # Other tips
 - If it crashes, drop the timestep - can check MOM CFL issues in `work/log/ocn.log`
 - Might find a resub script helpful - usually it takes about 5 segfaults straight after initialisation until it finally wants to run :( e.g. https://github.com/claireyung/access-om3-configs/blob/8km_jra_ryf_obc2-sapphirerapid-Charrassin-newparams-rerun-Wright-spinup-accessom2IC-yr9/resub.sh and add `    error: resub.sh    run: rm -f resubmit.count` to `userscripts` section of `config.yaml`
+- Note if you have a resub script, even if you submit just for one month you need `payu run -n 1` otherwise the resub script gets confused and won't resubmit it
