@@ -25,8 +25,8 @@ ncpus: 4992
 jobfs: 10GB
 mem: 24576GB
 
-walltime: 4:00:00
-jobname: iceshelfpanAnfrazil
+walltime: 5:00:00
+jobname: iceshelfpanAn3m
 
 model: access-om3
 
@@ -86,7 +86,7 @@ modules:
   load:
   - model-tools/mppnccombine-fast/2025.07.000
   - nco/5.0.5
-  - access-om3/pr189-19
+  - access-om3/pr246-2
 
 payu_minimum_version: 1.1.6
 
