@@ -2,7 +2,7 @@
 
 # If submitting to a different project to your default, uncomment line below 
 # and change project code as appropriate; also set shortpath below
-project: x77
+project: g40
 # Force payu to always find, and save, files in this scratch project directory
 shortpath: /scratch/oz91
 
@@ -25,8 +25,8 @@ ncpus: 4992
 jobfs: 10GB
 mem: 24576GB
 
-walltime: 4:00:00
-jobname: iceshelfpanAn
+walltime: 5:00:00
+jobname: iceshelfpanAnfrazil
 
 model: access-om3
 
