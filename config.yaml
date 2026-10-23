@@ -33,16 +33,16 @@ model: access-om3
 exe: access-om3-MOM6-CICE6
 
 input:
-        - /g/data/x77/cy8964/mom6/input/input-8km/17.06.26/kmt.nc
+        - /g/data/x77/cy8964/mom6/input/input-8km/07.09.26-BearRidgeSI/kmt.nc
         - /g/data/vk83/prerelease/configurations/inputs/access-om3/panan.4km/2026.01.08/ocean_hgrid.nc
         - /g/data/vk83/prerelease/configurations/inputs/access-om3/panan.4km/2026.01.08/ocean_vgrid.nc
         - /g/data/x77/cy8964/mom6/input/input-8km/17.06.26/ocean_temp_salt.res.nc
         - /g/data/vk83/prerelease/configurations/inputs/access-om3/panan.4km/2026.01.08/salt_sfc_restore.nc
         - /g/data/vk83/prerelease/configurations/inputs/access-om3/panan-isf.4km/2026.01.08/salt_restore_mask.nc
-        - /g/data/x77/cy8964/mom6/input/input-8km/17.06.26/topog_seaice.nc
+        - /g/data/x77/cy8964/mom6/input/input-8km/07.09.26-BearRidgeSI/topog_seaice.nc
         - /g/data/x77/cy8964/mom6/input/input-8km/22.06.26/topog.nc
         - /g/data/vk83/prerelease/configurations/inputs/access-om3/panan.4km/2026.06.17/chl_globcolour_monthly_clim.nc
-        - /g/data/x77/cy8964/mom6/input/input-8km/17.06.26/access-om3-4km-ESMFmesh.nc
+        - /g/data/x77/cy8964/mom6/input/input-8km/07.09.26-BearRidgeSI/access-om3-4km-ESMFmesh.nc
         - /g/data/x77/cy8964/mom6/input/input-8km/17.06.26/access-om3-4km-nomask-ESMFmesh.nc
         - /g/data/vk83/prerelease/configurations/inputs/access-om3/panan-isf.4km/2026.01.08/access-om3-4km-rof-remap-weights.nc
         - /g/data/vk83/prerelease/configurations/inputs/access-om3/share/meshes/share/2026.01.21/JRA55do-datm-ESMFmesh.nc
@@ -51,7 +51,7 @@ input:
         - /g/data/qv56/replicas/input4MIPs/CMIP6Plus/OMIP/MRI/MRI-JRA55-do-1-6-0/atmos/
         - /g/data/x77/cy8964/mom6/input/input-8km/ryf_gregorian_1975-1979_forcing_access_yr2_8km_fill.nc
         - /g/data/vk83/prerelease/configurations/inputs/access-om3/panan.4km/2026.01.08/diag_rho2.nc
-        - /g/data/x77/cy8964/mom6/input/input-8km/22.06.26/ice_shelf_thick.nc
+        - /g/data/x77/cy8964/mom6/input/input-8km/07.09.26-BearRidgeSI/ice_shelf_thick.nc
         - /g/data/x77/cy8964/mom6/input/input-8km/17.06.26/bottom_roughness.nc
         - /g/data/vk83/prerelease/configurations/inputs/access-om3/panan-isf.4km/2026.01.08/tideamp.nc
         - /g/data/x77/cy8964/mom6/input/input-8km/17.06.26/mask_table.2232.110x55
