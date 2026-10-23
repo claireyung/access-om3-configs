@@ -293,6 +293,7 @@ diag_table:
             area_shelf_h: # ice shelf area
             h_shelf: # ice shelf thickness
             tflux_shelf: # heat flux conduction ice shelf
+            frazil_refreeze: # frazil refreeze component
 
     'daily scalar timeseries':
         defaults:  # these can be overridden for individual fields below
