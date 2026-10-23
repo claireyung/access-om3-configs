@@ -33,7 +33,7 @@ FRAZIL = True                   !   [Boolean] default = False
                                 ! If true, water freezes if it gets too cold, and the accumulated heat deficit
                                 ! is returned in the surface state.  FRAZIL is only used if
                                 ! ENABLE_THERMODYNAMICS is true.
-FRAZIL_NOT_UNDER_ICESHELF = True
+FRAZIL_NOT_UNDER_ICESHELF = False
 BOUND_SALINITY = True           !   [Boolean] default = False
                                 ! If true, limit salinity to being positive. (The sea-ice model may ask for more
                                 ! salt than is available and drive the salinity negative otherwise.)
