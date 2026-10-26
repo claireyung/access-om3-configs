@@ -13,7 +13,6 @@ Also refer to previous notes on the ACCESS-rOM3 panantarctic with no ice shelves
 # Instructions for starting from rest
 ### Step 1: run for 10 days from rest
 - In `MOM_input` set `DT = 150`, `DT_THERM = 150`
-- In `input.nml` set `input_filename = 'n'`
 - Change coupling timestep at corner of `nuopc.runseq` to also be 150
 - In `nuopc.runconfig` `CLOCK` section change `stop_n = 10`, `restart_n = 10`,`stop_option = ndays`, `restart_option = ndays`  
 - To save ICs, use `SAVE_INITIAL_CONDS = True` in `MOM_input`
@@ -21,7 +20,6 @@ Also refer to previous notes on the ACCESS-rOM3 panantarctic with no ice shelves
 - Check you are using the correct OBC forcing file (IAF only, see step 3)
 
 ### Step 2: run for second 21 days of Jan 
-- Comment out `input.nml` `input_filename = 'n'`
 - Change `DT`, `DT_THERM` and coupling timestep to be 400 (should work - otherwise try something in between eg 300)
 - You can also set `DT_THERM` to be larger, e.g. 800, but often this crashes in my experience 10% of the time
 - Turn off IC saving with `SAVE_INITIAL_CONDS = False` in `MOM_input`

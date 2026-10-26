@@ -57,6 +57,7 @@ input:
         - /g/data/x77/cy8964/mom6/input/input-8km/17.06.26/mask_table.2232.110x55
         - /g/data/vk83/prerelease/configurations/inputs/access-om3/panan-isf.4km/2026.01.08/mask_table.1490.84x49
         - /g/data/x77/cy8964/mom6/input/input-8km/17.06.26/rofi_spread_Bgrid_non_advective.nc
+        - /g/data/x77/cy8964/mom6/input/input-8km/Sea_ice_restart/access-om3.cice.r.1980-01-01-00000-restartICs.nc
 
 collate:
   restart: true
@@ -86,7 +87,7 @@ modules:
   load:
   - model-tools/mppnccombine-fast/2025.07.000
   - nco/5.0.5
-  - access-om3/pr246-7
+  - access-om3/pr246-9
 
 payu_minimum_version: 1.1.6
 
